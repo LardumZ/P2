@@ -1,0 +1,37 @@
+
+\thispagestyle{empty}
+{
+\centering
+
+\vspace{10pt}
+{\Huge \thetitle} \\
+\vspace{10pt}
+
+\setcounter{forcounter}{0} 
+\foreach \i in \theauthor{
+    \addtocounter{forcounter}{1}
+    \mbox{\i}\ifnum \theforcounter<\theauthorlen {,} \else {} \fi\hspace{-5pt}
+} \\
+\groupname \\
+
+\vspace{25pt}
+
+\semester \\
+
+\vspace{25pt}
+
+Aalborg Universitet \\
+\institute \\
+
+\vspace{50pt}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\linewidth]{Sections/1 Indledning og Formalia/Media/Assembly.png}
+\end{figure}
+}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=.1\linewidth]{Sections/1 Indledning og Formalia/Media/logo.png}
+\end{figure}
+

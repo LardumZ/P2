@@ -1,0 +1,85 @@
+\subsection{Trin 7 - Udarbejdelse af grænseværdier for designspecifikationer} \label{Trin 7} 
+
+Designspecifikationer er målbare krav, med en optimerings retning og en grænseværdi. Grænseværdierne opstilles for designspecifikationerne fra tabel \ref{tab:krav}, på baggrund af problemanalysen i kapitel \ref{Problemanalyse}. Løsninger der ligger udenfor en eller flere af grænseværdierne, er ikke konkurrencedygtige på de punkter, men er stadig funktionelle løsninger.
+
+Designspecifikation 1 har ingen optimeringsretning, fordi den har en øvre og en nedre grænse. Den nedre grænse er en hård grænse da løsningen vil bevæge sig ind i mikroskala-området hvis den kommer under. Den beskrives som en designspecifikation, da en løsning der kun kan producere prikker mellem \(\SI{0,1}{mm}\) og \(\SI{0,5}{mm}\) stadig er en funktionel løsning, men den mister konkurrencedygtighed. Herunder sættes værdier og enheder på designspecifikationerne.
+
+%Designspecifikation 1 er unik i forhold til de andre da den ingen optimeringsretning har, og reelt består af 2 forskellige værdier, en øvre og nedre grænse. 
+
+%For designspecifikation 1 er den ønskede specifikation angivet til mellem 0,1 og 1. Der er ingen optimeringsretning, idet prikstørrelsen skal være valgbar indenfor det ønskede interval. Der er afgrænset til makroskala, hvorfra grænseværdien er $\leq 0.1$ mm, som angiver grænsen mellem mikro- og makroskala. Et produkt der producerer prikker på mikroskala opfylder ikke kravet om makroskala, og kan derfor ikke anvendes til det ønskede formål. Der opstilles ønskede specifikationer for alle designspecifikationer, som ses i tabel \ref{tab:trin 7 designspec}.  
+
+
+\begin{table}[H]
+    \centering
+     \caption{Design specifikationer. For optimerings retningen (OR) betyder \textbf{--} en fastlagt værdi, $\blacktriangledown$ betyder specifikationen forbedres når værdien mindskes og $\blacktriangle$ betyder specifikationen forbedres når værdien øges. Relativ vigtighed ($\Omega$)}
+      \begin{tabular}{|l|c|c|c|c|} \hline
+     \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Designspecifikation}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{OR}}} &\multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Grænseværdi}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Enhed}}} & \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{$\Omega$}} \\ \specialrule{0pt} {0.5pt}{0pt} \hline
+        1. Prikstørrelse & \textbf{--} & 0,1 og 1,0 & mm & 9\% \\ \hline
+        2. Variation på prikstørrelser & $\blacktriangledown$ & $\pm0,05$& mm & 11\% \\ \hline
+         3. Variation på prikplacering & $\blacktriangledown$ & $\pm0,1$ & mm & 11\% \\ \hline
+        \makecell[l]{4. Størrelse af arbejdsområde \\ \quad  speckle pattern} & $\blacktriangle$ & $200 \times 150 \times 50 $ & mm & 6\% \\ \hline
+        \makecell[l]{5. Flytning af emnet under fremstilling \\ \quad  af speckle pattern}  & $\blacktriangledown$ & 0,01 & mm & 13\% \\ \hline
+        \makecell[l]{6. Antal forskellige farvemidler til \\ \quad  spceckle pattern} & $\blacktriangle$ & 2 & \small Farvemidler & 6\% \\ \hline
+        \makecell[l]{7. Kontrast mellem prik og baggrund} & $\blacktriangle$ & 100 & - & 7\% \\ \hline
+        8. Tidsforbrug på prikplacering & $\blacktriangledown$ & 30 & $\SI{}{s/cm^2}$ & 6\%\\ \hline
+        \makecell[l]{9. Brugerinvolvering under process} & $\blacktriangledown$ & 1 & min & 9\% \\ \hline
+        10. Tid brugt på opsætning  & $\blacktriangledown$  & 10 & min & 10\% \\ \hline
+        \makecell[l]{ 11. Antal værktøj til at samle hele  \\ \quad \,produktet} & $\blacktriangledown$ & 5 & \small Værktøj & 6\%\\ \hline
+        \makecell[l]{12. Antal specialværktøj til at samle \\ \quad \, hele produktet} & $\blacktriangledown$ & 1 & \small Værktøj & 6\%\\ \hline
+    \end{tabular}
+    \label{tab:trin 7 designspec}
+\end{table} \plainbreak{-0.8}
+
+Sidste kolonne i tabel \ref{tab:trin 7 designspec} angiver designspecifikationens relative vigtighed ($\Omega$) i forhold til de øvrige designspecifikationer. Den relative vigtighed beregnes ved først at gange sammenhængen mellem ønsker og den enkelte designspecifikation (kolonnerne i tabel \ref{fig: HOQ trin 6}) med vægtningen af hvert ønske i trin 3. Den relative vigtighed beregnes ved formel \ref{formel: relativ vigtighed}, hvor point fra en enkelt designspecifikations relation til alle ønsker noteres med det græske tegn $\beta$. $\beta$ er summen af vægtninger ($\nu$) ganget med relationens værdi $\psi$.
+\begin{equation} \label{formel: relativ vigtighed}
+    \Omega = \frac{\sum(\nu\cdot \psi)}{\sum(\sum(\nu\cdot \psi)} = \frac{\beta}{\sum\beta}
+\end{equation}
+
+Fra afsnit \ref{Trin 6} er det opgivet, at en stærk relation ($\blackbigcirc$) = 9 point, moderat relation ($\bigcirc$) = 3 point og en svag relation ($\bigtriangledown$) = 1 point. For hver designspecifikation ganges værdien fra relationen med det relaterede ønskes vægtning. 
+
+
+
+\begin{comment}
+Dette giver point for relationen per designspecifiktation ($\textnormal{Point}_\textnormal{{Rpd}}$)  Dette er beskrevet i formel \ref{formel: Point fra relation}, hvor 
+
+\begin{equation} \label{formel: Point fra relation}
+    \textnormal{Point}_\textnormal{{Rpd}}= \sum \textnormal{vægtning} \cdot\ \textnormal{relations værdi}
+\end{equation}
+
+Den relative vigtighed af hver design specifikation er procenten den udgør af den summen af alle $\textnormal{Point}_\textnormal{{Rpd}}$, som det ses i formel \ref{formel: Relativ vigtighed}:
+
+\begin{equation} \label{formel: Relativ vigtighed}
+    \textnormal{Relativ vigtighed} = \frac{\textnormal{Point}_{\textnormal{Rpd}}}{\sum \textnormal{Point}_{\textnormal{Rpd}}}
+\end{equation}
+
+
+Gamle tabel:
+\begin{table}[H]
+    \centering
+     \caption{Design specifikationer. For optimerings retningen (OR) betyder \textbf{--} en fastlagt værdi, $\blacktriangledown$ betyder specifikationen forbedres når værdien mindskes og $\blacktriangle$ betyder specifikationen forbedres når værdien øges. Relativ vigtighed ($\Omega$)}
+      \begin{tabular}{|l|c|c|c|c|c|} \hline
+     \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Designspecifikation}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{OR}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Ønsket spec.}}} &\multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Grænseværdi}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Enhed}}} & \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{$\Omega$}} \\ \specialrule{0pt} {0.5pt}{0pt} \hline
+        \makecell[l]{1. Prikstørrelse } & \textbf{--} & 0,1 - 1 & 1,2 & mm & 9\% \\ \hline
+        2. Variation på prikstørrelser & $\blacktriangledown$ & 0 & 0,05& mm & 11\% \\ \hline
+        3. Variation på prikplacering & $\blacktriangledown$ & 0 & 0,1 & mm & 11\% \\ \hline
+        \makecell[l]{4. Størrelse af arbejdsområde \\ \quad  speckle pattern} & $\blacktriangle$ & $200 \times 150 \times 50 $ & $ \geq 150 \times 100 \times 20 $ &mm & 6\% \\ \hline
+        \makecell[l]{5. Flytning af emnet under \\ \quad  fremstilling af speckle pattern}  & $\blacktriangledown$ & 0 & 0,01 & mm & 13\% \\ \hline
+        \makecell[l]{6. Antal forskellige farvemidler \\ \quad til spceckle pattern} & $\blacktriangle$ & 3 &  $ \geq 1$& - & 6\% \\ \hline
+        \makecell[l]{7. Kontrast mellem prik og \\ \quad  baggrund}	& $\blacktriangle$ & $< 130$ & 100 & - & 7\% \\ \hline
+        \makecell[l]{8. Tidsforbrug på prikplacering } & $\blacktriangledown$ & 25 & 30 & $s/cm^2$ & 6\%\\ \hline
+        \makecell[l]{9. Brugerinvolvering under \\ \quad  process} & $\blacktriangledown$ & 0 & 1 & min & 9\% \\ \hline
+        10. Tid brugt på opsætning  & $\blacktriangledown$  & 2 & 10 & min & 10\% \\ \hline
+       \makecell[l]{ 11. Antal værktøj til at samle \\ \quad \,  hele produktet} & $\blacktriangledown$ & 5 & 7 & - & 6\%\\ \hline
+        \makecell[l]{12. Antal specialværktøj til \\ \quad \, at samle hele  produktet}  & $\blacktriangledown$ & 0 & 1 & - & 6\%\\ \hline
+    
+    \end{tabular}
+    \label{tab:trin 7 designspec}
+\end{table}
+\end{comment}
+
+
+
+
+
+
+

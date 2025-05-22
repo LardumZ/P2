@@ -1,0 +1,98 @@
+\section{Vurdering af præstationskrav} \label{vurdering af krav}
+Efter udarbejdelsen af kravspecifikation og udviklingen af det endelige koncept er det essentielt at vurdere, i hvilken grad designet lever op til de opstillede præstationskrav. Denne vurdering har til formål at klarlægge, hvorvidt den mekaniske løsning er egnet til at opfylde de krav, der blev fastlagt ud fra de behov der blev fundet i problemanalysen (se afsnit \ref{Endelige kravspecifikationer}). Graden hvor i kravene er opfyldt, vil blive vist i tabel \ref{tab: vurdering af krav} herunder. Følgende tabel klargøre hvor vidt der leves op til de forskellige krav, samt angiver i hvilede afsnit der er blevet arbejdet med hvert krav. 
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[H]
+    \centering
+    \small
+     \caption{Præstationskrav. Relativ vigtighed ($\Omega$). \textbf{++} betyder at præstationskravet er opfyldt med sikkerhed. \textbf{+} betyder at præstationskravet er vurderet opfyldt med små usikkerheder. \textbf{/} betyder at der er for stor usikkerhed, til at bestemme om præstationskravet er opfyldt. \textbf{-} betyder at præstationskravet ikke er opfyldt. Afsnit kolonnen angiver hvor i rapporten der er blevet taget højde for kravet. }
+      \begin{tabular}{|p{11cm}|c|c|c|} \hline
+     \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Præstationskrav}}}  &  \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{Afsnit}} &  \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{Vurdering}} \\ \specialrule{0pt} {0.5pt}{0pt} \hline
+        1. Justerbar prikstørrelse fra \SI{0,1}{mm}-\SI{1,0}{mm}  & \ref{Prikplacering} & {$+$}\\ \hline
+        2. Variation i størrelse af påsat prik på maksimum $\SI{\pm0,05}{mm}$ &  \ref{Prikplacering} & {$+$}\\ \hline
+        3. Acceptabel afvigelse af planlagt prikplacering på $\SI{\pm0,1}{mm}$ &   \ref{Præcisions beregninger} & {$+$}\\ \hline
+        4. Størrelse af arbejdsområde $\SI{200}{mm} \times \SI{150}{mm}  \times\SI{50}{mm} $  & \ref{Indspænding} & {$++$}\\ \hline
+        5. Maks flytning af emne under påføring af speckle pattern på \SI{0,01}{mm}  &  \ref{Indspænding} & {$+$}\\ \hline
+        6. Mængde af forskellige påføringsmidler til koncept på minimum 2  & \ref{Prikplacering} & {$++$}\\ \hline
+        7. Minimum greyscaleværdi på 100 point &  \ref{Prikplacering} & {$/$} \\ \hline
+        8. Maksimalt tidsforbrug på prikplacering pr. cm$^2$ på 30 sekunder  &  \ref{Kinematisk analyse} & {$+$}\\ \hline
+        9.  Maks brugerinteraktion under påføring af speckle pattern på 1 min & - & {$+$}\\ \hline
+        10. Maksimal tidsforbrug på opsætning af robot på 10 min & \ref{Indspænding} & {$+$}\\ \hline
+        11. Mængde af forskellige værktøjer til samling på 5  stk.  & \ref{Stykliste} & {$++$}\\ \hline
+        12. Mængde af specialværktøj til samling af robot på maksimum 1 stk.& \ref{Stykliste} &{$++$}\\ \hline
+    \end{tabular}
+    \label{tab: vurdering af krav}
+\end{table} 
+
+
+ \plainbreak{1}      
+Præstationskrav 1 og 2 vurderes begge til 1 plus. Dette er gjort da værktøjet der laver disse prikker kommer udefra, og de mål der bliver angivet ikke nødvendigvis er lavet på de metalflader og det miljø der skal bruges i DIC sammenhæng (Se afsnit \ref{Prikplacering}).
+
+Præstationskrav 3 har fået ét plus, da der her igen er små usikkerheder i forhold til løsningen. Der er lavet udregninger på udbøjning under bevægelse som overholdet kravet, der er her ikke taget højde for egenfrekvens og vibration af skruen, som kan føre til komplikationer i bevægelsen (Se afsnit \ref{Præcisions beregninger}).
+
+Præstationskrav 4 og 5 beskriver, vurderes til hhv. to plus og et plus. Arbejdsområdet er sikret sin størrelse med plads til indspændinger, dette er sikret og dermed to plusser. Flytning af emnet har ét plus, da der er lavet indspændinger, der i teorien skal holde emnet fast, dette er ikke testet og er derfor ikke sikkert. (Se afsnit \ref{Indspænding})
+
+Præstationskrav 6 og 7 har fået henholdsvis. to plusser og en skråstreg. Præstationskrav 6 er med sikkerhed løst, da prikværktøjet, PeJV, er egnet til en lang række væsker. Præstationskrav 7, omkring grayscale værdi, kan ikke vurderes, da dette afhænger af baggrundsfarve og malingens farve, og dette er ikke undersøgt i rapporten. (Se afsnit \ref{Prikplacering})
+
+Præstationskrav 8 har fået ét plus. Dette er vurderet ud fra udregningerne fra den kinematiske analyse. Her er der ikke taget hensyn til at flytte massen på skruen, og der er derfor usikkerheder i løsningsgraden. (Se afsnit \ref{Kinematisk analyse})
+
+Det er blevet vurderet at produktets opsætning ikke overstiger de 10 minutter, som præstationskrav 10 frem sætter, samt heller ikke overstiger præstationskrav 9's begrænsning på ét minuts brugerinteraktion. Dog er produktet ikke blevet fremstillet og testet, hvilket betyder det ikke kan konkluders med total sikkerhed at præstationskrav 9 og 10 er opfyldt (Se afsnit \ref{Indspænding}).
+
+Med et brug af blot 3 forskellige standard værktøjer, opfyldes både præstationskrav 11 og 12, hvortil de begge er blevet vurderet til to plusser (Se afsnit \ref{Stykliste}).
+
+
+
+%- vurdering af speckle pattern robot ift. HoQ ønsker (bilag \ref{Bilag - Vurdering af speckle patttern robot})
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+1. Prikstørrelse\\ 
+Prikkernes minimumsstørrelse er sat til 0,1 mm for at sikre synlighed med det blotte øje i makroskala. Dette krav er løst gennem anvendelsen af PeJV-systemet, som tillader meget præcis dosering af væske. Systemet er er i stand til at placere prikker ned til  0,03 mm i diameter, hvilket opfylder det tekniske krav og sikre anvendeligheden til DIC i den ønskede størrelsesorden (se afsnit \ref{Prikplacering}).  
+
+2. Variation på prikstørrelser\\
+Det ønskede krav er, at prikstørrelsesvariationen skulle holdes under $\pm$ 0,05 mm for at sikre et ensartet Vpeckle pattern. Løsningen anvender PeJV-systemet til at opnå kontrolleret og gentagelig dosering af prikker. PeJV-systemet sikrer en lav variation, dog er der ikke gennemført målinger til at dokumentere præcisionen af PeJV-systemet. Da den reelle variation derfor ikke kan verificeres, vurderes kravet som delvist opfyldt, (se afsnit \ref{Prikplacering}).  
+
+3. Variation på prikplacering\\
+Kravet om placering med høj præcision (maksimalt $\pm$ 0,1 mm afvigelse) er løst ved hjælp af lineær føring og steppermotorer som muliggører præcis og kontrolleret bevægelse af doseringshovedet. Beregninger i afsnit \ref{Kinematisk analyse af lineær bevægelse} og \ref{beregninger: lineær bevægelse præcision} viser, at systemet kan holde sig inden for den ønskede tolerance margin. Dermed er specifikationen opfyldt.  
+
+4. Størrelse af arbejdsområde\\
+ Designet skulle kunne dække et ønsket arbejdsområde på 200 mm x 150 mm x 50mm. Dette krav er løst ved at dimensionere robotten specifikt til dette område, (se kapitel \ref{Detaljeløsning}). Kravet vurderes derfor som opfyldt.  
+
+5. Flytning af emnet under proces\\
+For at undgå fejl i speckle pattern’et skal emnet forblive fuldstændigt stationært under prikplaceringen. Dette er løst gennem en simpelt mekanisk indspændingssystem som fastholder emnet under hele processen. Indspændingsløsningen er beskrevet i afsnit \ref{Indspænding} og vurderes til at kunne holde bevægelsen under de ønskede $\pm$ 0,1 mm. Derfor betragtes kravet som opfyldt. 
+
+6. Antal forskellige påføringsmidler\\
+Systemet skal kunne understøtte flere forskellige typer blæk eller farvestoffer for at sikre fleksibilitet på tværs af materialer og overflader. Dette er løst gennem valget af PeJV, som kan håndtere væsker med varierende viskositet. Dette gør det muligt at benytte forskellige typer påføringsmidler uden ombygning eller justering. Derved vurderes kravet som opfyldt. 
+
+7. Kontrast mellem prik og baggrund\\
+For at sikre præcis billedbehandling i DIC kræves en kontrast på minimum 130 gray-level point mellem prikker og baggrund. Dette opnås ved at anvende sort farve på en hvid eller lys baggrund, hvilket giver høj kontrast og gør prikkerne tydelige. Løsningen vurderes som opfyldt, da et farvemiddel kan vælges der passer til det enkelte materiale. 
+
+8. Tidsforbrug på prikplacering\\
+Der er stillet et krav, at systemet skal kunne fremstille 1 cm² på 30 sekunder, for at sikre effektivitet og gøre løsningen konkurrencedygtig i forhold til manuelle metoder. I det færdige design tager det 9,46 sekunder at dække 1 cm² med prikker (se afsnit \ref{Kinematisk analyse af lineær bevægelse}). Systemets bevægelse og dosering foregår automatisk og uden brugerinvolvering, hvilket betyder, at det samlede arbejdstempo opretholdes stabilt. Denne tid vurderes at være passende i forhold til kravets formål og systemets anvendelse. Derfor anses specifikationen som opfyldt.
+
+9. Brugerinvolvering under proces\\
+Et vigtigt mål var at minimere brugerinvolvering, således at systemet kunne køre autonomt efter opsætning. Dette er løst gennem et kontrolsystem, der efter kalibrering selv udfører hele prikplaceringen. Brugeren skal kun placere emnet, spænde emnet ind og starte processen. Kravet vurderes som opfyldt. 
+
+10. Tid brugt på opsætning\\
+Opsætningstiden skal holdes lav for at gøre systemet effektivt i brug. Dette er løst gennem en simpel indspændingsmekanisme, i kombination med et intuitivt kalibreringssystem via kamera og touchskærm (afsnit \ref{Detalje - kontrolsystem}). løsningen vurderes at opfylde kravet.  
+
+11. Antal værktøjer til samling\\
+For at sikre nem samling og vedligeholdelse ønskedes et begrænset antal standardværktøjer. Konstruktionen benytter primært standardskruer og fittings, som kan samles med almindeligt håndværktøj som unbrakonøgler og skruetrækkere. Afsnit \ref{Stykliste} beskriver komponentvalget, og løsningen vurderes som opfyldt. 
+
+12. Antal specialværktøjer til samling\\
+Systemet skal konstrueres uden eller med minimalt behov for specialværktøjer, for at sikre nem produktion og lav praktisk barriere for brug. Der benyttes udelukkende standardkomponenter, som kan håndteres med almindelige værktøjer. Afsnit \ref{Stykliste} bekræfter dette, og kravet vurderes som fuldt opfyldt. 
+\\\\
+På baggrund af vurderingen af de 12 opstillede designspecifikationer kan det konkluderes, at det færdige system i sin helhed lever op til de tekniske og funktionelle krav, der blev defineret i kravspecifikationen. 
+
+Systemet opfylder kravene til præcision både i forhold til prikstørrelse og placering, og det specificerede arbejdsområde er fuldt dækket. Ligeledes er der taget højde for brugervenlighed gennem lav opsætningstid og minimalt værktøjsbehov. PeJV-systemets evne til at håndtere flere væsketyper sikrer desuden høj fleksibilitet og god kontrast i prikkerne, hvilket er afgørende for anvendelse i Digital Image Correlation.
+
+Dermed vurderes det samlede design som både teknisk velfunderet og anvendeligt i praksis i forhold til projektets målsætning.
+\end{comment}

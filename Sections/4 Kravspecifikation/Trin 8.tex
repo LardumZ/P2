@@ -1,0 +1,165 @@
+\subsection{Trin 8 - Designspecifikationernes gensidige afhængighed} \label{Trin 8}
+
+%- Vurderingen af hvordan optimering af en designspecifikation påvirker optimeringen af en anden designspecifikation. Derfor kan alle designspecifikation der ikke har en optimeringsretningen ikke vurderes mellem hinanden. 
+
+\begin{comment}
+  \begin{figure} [H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{Sections/4 Kravspecifikation/Media/Tag til HoQ.jpg}
+    \caption{Tag til HOQ}
+    \label{fig:Tag til HOQ}
+\end{figure}  
+\end{comment}
+
+Taget i et HoQ, som der kan se i figur \ref{Table: HOQ tag ny}, viser hvordan de forskellige designspecifikationer påvirker hinanden. Her markeres der, om en forbedring af en designspecifikation, også gavner et andet (\textcolor{ForestGreen}{$+$}), eller om det kan skabe en konflikt (\textcolor{red}{$-$}). For eksempel kan det ses, at høj hastighed gør det sværere at sikre høj præcision, og det bliver vist med et minus i taget. På den måde hjælper taget med at give overblik over, hvor der skal være fokus, når der træffes designbeslutninger. Det gør det lettere at finde de bedste løsninger, uden at skabe nye problemer andre steder.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\small, myfit/.style={fill=white,draw,line width=\mylinewidth,
+ inner sep=-0.5*\mylinewidth,fit=#1}, 
+ ]
+ \def\mylinewidth{1pt}
+ \matrix[matrix of nodes, nodes={draw,line width=\mylinewidth,minimum width=1.6em,
+ minimum height=1.4em, anchor=center}, column sep=-\mylinewidth,
+ ,row sep=-\mylinewidth,%nodes in empty cells,
+ column 1/.style={nodes={minimum width=9.4cm,minimum height=0.8cm}},
+ column 2/.style={nodes={minimum width=0.8cm,minimum height=0.8cm}}]  (mat)
+ { \hspace{-2.9cm} 1. Justering af prikstørrelse i makroskala  & $\textbf{--}$  &\\
+ \hspace{-4.75cm} 2. Variation på prikstørrelse &  $\blacktriangledown$ &\\
+     \hspace{-4.65cm} 3. Variation på prikplacering & $\blacktriangledown$ & \\
+     \hspace{-4.65cm} 4. Størrelse af arbejdsområde  & $\blacktriangle$ & \\
+     \hspace{-.25cm} 5. Flytning af emnet under fremstilling af speckle pattern &  $\blacktriangledown$ &\\
+     \hspace{-1.4cm} 6. Antal forskellige farvemidler til speckle pattern & $\blacktriangledown$  & \\
+     \hspace{-3.45cm} 7. Kontrast mellem prik og baggrund & $\blacktriangle$ & \\
+     \hspace{-4.4cm} 8. Tidsforbrug på prikplacering &  $\blacktriangle$ &\\
+     \hspace{-3.8cm} 9. Bruger involvering under proces & $\blacktriangledown$ &\\
+     \hspace{-4.9cm} 10. Tid brugt på opsætning  & $\blacktriangledown$ & \\
+     \hspace{-2.25cm} 11. Antal værktøj til at samle hele produktet &  $\blacktriangledown$ &\\
+     \hspace{-1.1cm} 12. Antal specialværktøj til at samle hele produktet & $\blacktriangledown$ & \\
+ };
+
+
+\draw[line width=\mylinewidth] (13.35em,12.57em) -- (26em,0em);
+\draw[line width=\mylinewidth] (13.35em,10.5em) -- (25em,-1.1em);
+\draw[line width=\mylinewidth] (13.35em,8.4em) -- (24em,-2em);
+\draw[line width=\mylinewidth] (13.35em,6.3em) -- (22.9em,-3.1em);
+\draw[line width=\mylinewidth] (13.35em,4.2em) -- (21.8em,-4.2em);
+\draw[line width=\mylinewidth] (13.35em,2.1em) -- (20.7em,-5.2em);
+\draw[line width=\mylinewidth] (13.35em,0.em) -- (19.6em,-6.3em);
+\draw[line width=\mylinewidth] (13.35em,-2.em) -- (18.59em,-7.3em);
+\draw[line width=\mylinewidth] (13.35em,-4.2em) -- (17.57em,-8.3em);
+\draw[line width=\mylinewidth] (13.35em,-6.3em) -- (16.56em,-9.35em);
+\draw[line width=\mylinewidth] (13.35em,-8.3em) -- (15.55em,-10.4em);
+\draw[line width=\mylinewidth] (13.35em,-10.4em) -- (14.5em,-11.5em);
+
+
+\draw[line width=\mylinewidth] (13.35em,10.4em) -- (14.5em,11.5em);
+\draw[line width=\mylinewidth] (13.35em,8.3em) -- (15.55em,10.4em);
+\draw[line width=\mylinewidth] (13.35em,6.3em) -- (16.56em,9.35em);
+\draw[line width=\mylinewidth] (13.35em,4.2em) -- (17.57em,8.3em);
+\draw[line width=\mylinewidth] (13.35em,2.em) -- (18.59em,7.3em);
+\draw[line width=\mylinewidth] (13.35em,0.em) -- (19.6em,6.3em);
+\draw[line width=\mylinewidth] (13.35em,-2.em) -- (20.7em,5.2em);
+\draw[line width=\mylinewidth] (13.35em,-4.2em) -- (21.8em,4.2em);
+\draw[line width=\mylinewidth] (13.35em,-6.3em) -- (22.9em,3.1em);
+\draw[line width=\mylinewidth] (13.35em,-8.4em) -- (24em,2em);
+\draw[line width=\mylinewidth] (13.35em,-10.5em) -- (25em,1.1em);
+\draw[line width=\mylinewidth] (13.35em,-12.57em) -- (26em,0em);
+
+
+\begin{scope}
+  \foreach \Coord in {(14.45em, 10.45em), (15.5em, 5.25em), (15.45em, 1.1em), (16.55em, 6.25em),(17.6em, 3.18em),(18.61em, 4.25em)}
+  {\node[fill=ForestGreen, inner sep=7pt,rotate=45] at \Coord {};}
+ \end{scope} 
+
+\begin{scope}
+  \foreach \Coord in {(14.45em, 10.45em), (15.5em, 5.25em), (15.5em, 1.1em), (16.57em, 6.25em),(17.65em, 3.15em),(18.72em, 4.15em)}
+  {\node at \Coord {\color{black}\textbf{+}};}
+ \end{scope} 
+
+ \begin{scope}
+  \foreach \Coord in {(14.45em, -10.45em), (17.6em, 1.1em), (18.65em, -2.15em) , (18.63em, 2.12em), (19.7em, 3.2em), (22.91em, 2.05em)}
+  {\node[fill=red, inner sep=7pt,rotate=45] at \Coord {};}
+ \end{scope} 
+ 
+ \begin{scope}
+  \foreach \Coord in {(14.45em, -10.45em), (17.65em, 1.1em), (18.65em, -2.15em) , (18.7em, 2.1em), (19.7em, 3.1em), (22.91em, 2.05em)}
+  {\node at \Coord {\textbf{\color{black}\Large{--}}};}
+ \end{scope} 
+
+\end{tikzpicture}
+\caption{Relation mellem designspecifikationer} 
+\label{Table: HOQ tag ny}
+\end{figure} \plainbreak{-0.5}
+
+
+Der er flere faktorer i HoQ, der har en negativ sammenhæng med hastighed (tidsforbrug på prikplacering). For eksempel kan øget hastighed, gå ud over tolerancen i prikstørrelse, tolerancen i prikplaceringen og arbejdsområdet, hvor et større arbejdsområde vil få  processen til at tage længere tid. Det betyder, at hvis det ønskes at øge hastigheden, skal der være fokus på, at det kan have en negativ indvirkning på andre vigtige krav i designet. 
+
+
+
+
+
+\begin{comment}
+\begin{figure}[H]
+\small
+\centering
+\begin{tikzpicture}[font=\small, myfit/.style={fill=white,draw,line width=\mylinewidth,
+ inner sep=-0.5*\mylinewidth,fit=#1}, 
+ circ/.style={path picture={\draw circle (0.3em);}},
+ circdot/.style={path picture={\draw circle (0.3em); 
+ \fill circle (0.1em);}},
+ trian/.style={path picture={\draw (-30:0.3em) -- (90:0.3em) -- (210:0.3em) --cycle ;}},
+ ]
+ \def\mylinewidth{1pt}
+ \matrix[matrix of nodes, nodes={draw,line width=\mylinewidth,minimum width=1.6em,
+ minimum height=1.6em, anchor=center}, column sep=-\mylinewidth,
+ ,row sep=-\mylinewidth, %nodes in empty cells,
+ row 1/.style={nodes={minimum width=0.8cm,minimum height=0.8cm}},
+ row 2/.style={nodes={ rotate=90, minimum width=9.4cm, minimum height=0.8cm}}](mat) 
+ {
+    & & & \textbf{--}  & $\blacktriangledown$ &  $\blacktriangledown$ & $\blacktriangle$ & $\blacktriangledown$ & $\blacktriangle$ & $\blacktriangle$  &$\blacktriangledown$ & $\blacktriangledown$ & $\blacktriangledown$  & $\blacktriangledown$&$\blacktriangledown$\\
+    & &  & \hspace{-6.6cm} 1. Prikstørrelse  & \hspace{-4.65cm} 2. Variation på prikstørrelse & \hspace{-4.6cm}  3. Variation på prikplacering & \hspace{-4.65cm}  4. Størrelse af arbejdsområde  &\hspace{-.25cm}  5. Flytning af emnet under fremstilling af speckle pattern & \hspace{-.9cm}  6. Antal forskellige påføringsmidler til speckle pattern & \hspace{-3.45cm} 7. Kontrast mellem prik og baggrund & \hspace{-3.2cm} 8.Tidsforbrug på prikplacering pr. cm$^2$ & \hspace{-3.8cm} 9. Brugerinvolvering under proces &\hspace{-4.9cm}  10. Tid brugt på opsætning  &  \hspace{-2.25cm}  11. Antal værktøj til at samle hele produktet & \hspace{-1.1cm} 12. Antal specialværktøj til at samle hele produktet\\
+ };
+
+ % etc.
+ \foreach \X in {4,...,15}
+ {\draw[line width=\mylinewidth] (mat-1-\X.north west)
+ -- (intersection cs:first line={(mat-1-\X.north west)--($(mat-1-\X.north west)+(45:5)$)},
+ second line={(mat-1-15.north east)--($(mat-1-15.north east)+(135:5)$)});
+ \draw[line width=\mylinewidth] (mat-1-\X.north east)
+ -- (intersection cs:first line={(mat-1-\X.north east)--($(mat-1-\X.north east)+(135:5)$)},
+ second line={(mat-1-4.north west)--($(mat-1-4.north west)+(45:5)$)});
+ }
+ \begin{scope}[shift={(mat-1-4.north west)},
+ x={(45:{sqrt(1/2)*0.8cm})},y={(-45:{sqrt(1/2)*0.8cm})}
+ ] % defination af lokalt koordinatosystem
+
+\begin{scope}[shift={(0.55,-0.5)}]
+  \foreach \Coord in {(1,1),(5,2),(5,3),(7,2),(7,3),(7,5)}
+  {\node[fill=ForestGreen, inner sep=7pt,rotate=45] at \Coord {};}
+ \end{scope} 
+
+\begin{scope}[shift={(0.525,-0.5)}]
+  \foreach \Coord in {(1,1),(5,2),(5,3),(7,2),(7,3),(7,5)}
+  {\node at \Coord {\color{black}\textbf{+}};}
+ \end{scope} 
+
+ \begin{scope}[shift={(0.55,-0.5)}]
+  \foreach \Coord in {(8,2),(8,3),(8,4),(9,1),(9,5),(11,11)}
+  {\node[fill=red, inner sep=7pt,rotate=45] at \Coord {};}
+ \end{scope} 
+ 
+ \begin{scope}[shift={(0.5,-0.5)}]
+  \foreach \Coord in {(8,2),(8,3),(8,4),(9,1),(9,5),(11,11)}
+  {\node at \Coord {\textbf{\color{black}\Large{--}}};}
+ \end{scope} 
+ 
+ \end{scope}
+\end{tikzpicture}
+
+\caption{Relation mellem designspecifikationer} 
+\label{fig: HOQ tag}
+\end{figure}
+   
+\end{comment}

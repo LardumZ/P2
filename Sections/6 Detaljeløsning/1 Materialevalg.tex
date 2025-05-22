@@ -1,0 +1,47 @@
+\section{Materialevalg} \label{Materialevalg}
+
+Ved udviklingen af en robot til præcis påføring af speckle pattern, bliver det nødvendigt at vurdere forskellige materialer ud fra både mekaniske og praktiske egenskaber. Formålet med dette afsnit er at undersøge, hvilke materialer, der bedst kan opfylde kravene til stivhed, styrke, lav vægt, slidstyrke, og bearbejdelighed. Tre materialer, der fremstår som særligt relevante i denne sammenhæng er aluminium (EN AW-6082 T6), rustfri AISI 304 stål og kulfiberforstærket polymer (CFRP). Disse materialer repræsenterer hver deres styrker og svagheder, og det er derfor væsentligt at analysere deres egenskaber i forhold til konstruktionens funktionelle krav.
+
+%Aluminium EN AW-6082 T6 er et let metal med en densitet på cirka 2700 kg/m\(^3\) og et E-modul omkring 71 GPa. Aluminiumet tilbyder et gunstigt forhold mellem vægt og stivhed, hvilket gør det velegnet til strukturer, hvor lav masse og tilstrækkelig mekanisk styrke er væsentlige krav. Materialets flydespænding er 255 MPa, og dets trækstyrke spænder  fra 300 til 340 MPa.  EN AW-6082 T6 har desuden gode bearbejdningsegenskaber, idet det let kan fræses, bores og svejses. En yderligere fordel er dets naturlige korrosionsbestandighed, hvilket reducerer behovet for omfattende overfladebehandling i mange anvendelser. Aluminium er samtidig relativt økonomisk tilgængeligt med en gennemsnitlig pris på omkring 244 DKK pr. kilogram \parencite{Aluminiumplade}. Ulempen ved aluminium er dog, at materialet i visse tilfælde kan have begrænset modstandskraft over for høje punktbelastninger, hvilket kan føre til lokal plastisk deformation, hvis konstruktionen ikke dimensioneres tilstrækkeligt.\parencite{Hesse2011AluminiumSheets}.
+
+Rustfri AISI 304 stål er et materiale med væsentligt højere densitet, omkring 7900 kg/m\(^3\), og en E-modul på cirka 193 GPa. Stål tilbyder en betydeligt højere stivhed og styrke end aluminium, hvilket gør det særligt egnet til komponenter, som udsættes for store belastninger eller gentagen mekanisk påvirkning. flydespænding for almindelige konstruktionsstål ligger typisk omkring 215 MPa, mens trækstyrken ligger mellem 500 og 750 MPa. Denne høje styrke gør stål velegnet til områder, hvor strukturel integritet og dimensionsstabilitet er afgørende over lang tid. Dog medfører den høje masse, at stålkonstruktioner i bevægelige systemer kan føre til øgede krav til motorstørrelser og energiforbrug. Stål tillader nøjagtig maskinbearbejdning og tilbyder robuste svejseegenskaber, hvilket kan være en fordel i konstruktioner, hvor stor præcision og høj samlingsstyrke er påkrævet. Prisen på stål ligger relativt lavt i forhold til andre materialer, med en gennemsnitlig pris på omkring 79 DKK pr. kilogram \parencite{Stalprofil}, hvilket gør det attraktivt i applikationer, hvor vægt ikke er den primære begrænsning \parencite{Jessen2011RustfritKorrosion}.
+
+Kulfiberforstærket polymer (CFRP) skiller sig væsentligt ud fra metallerne ved at kombinere en meget lav densitet, typisk omkring 1600 kg/m\(^3\), med en meget høj mekanisk styrke i fiberretningen. E-modulet for CFRP varierer typisk mellem 70 og 140 GPa afhængigt af fiberindhold og opsætning, mens trækstyrken i fiberretningen ofte ligger mellem 600 og 1200 MPa. Dette giver mulighed for ekstremt lette og stive strukturer, som kan bevæge sig hurtigt og præcist med minimale inertikræfter. CFRP er dog anisotropt, hvilket betyder, at dets mekaniske egenskaber afhænger stærkt af fiberorienteringen, og materialet kan være følsomt over for belastninger på tværs af fibrene. Derudover er bearbejdning af kulfiber mere kompliceret end for metaller, og processen kræver specialværktøj og særlige sikkerhedsforanstaltninger for at håndtere støv og fibre korrekt. Økonomisk ligger CFRP væsentligt højere end både aluminium og stål, med en gennemsnitlig pris på omkring 800–1200 DKK pr. kilogram, hvilket begrænser dets anvendelse til applikationer, hvor materialets unikke kombination af lav vægt og høj stivhed er afgørende\parencite{Starr1995CarbonDatabook}.
+
+
+\begin{comment}
+    \begin{table}[H]
+    \centering
+    \caption{Materialeegenskaber}
+    \begin{tabular}{|l|c|c|c|} \cline{2-4}
+        \multicolumn{1}{c|}{~} & \rowcolor{lightgray!20} Aluminium & Stål & CFRP \\ \hline
+        \multicolumn{1}{|l|}{ \cellcolor{aaublue} \textcolor{white}{E-modul}} & 69 GPa & 210 GPa & 70-140 GPa\\ \hline
+        \multicolumn{1}{|l|}{\cellcolor{    aaublue} \textcolor{white}{Flydespænding $\sigma_y$}}& 190-210 MPa& 355 MPa&  -\\ \hline
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{Trækstyrke}} & 215-250 MPa& 470-630 Mpa& 1000 MPa \\ \hline
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{Densitet $\rho$}}& 2700 $kg/m^{3}$ & 7850 $kg/m^{3}$ & 1600 $kg/m^{3}$\\ \hline
+    \end{tabular}
+\end{table}
+\end{comment}
+
+
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Materialeegenskaber}
+    \begin{tabular}{|l|c|c|c|c|c|} \cline{2-5}
+        \multicolumn{1}{c|}{~} & \multicolumn{1}{|c|}{ \cellcolor{aaublue} \textcolor{white}{E-modul}} &  \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Flydespænding $\sigma_y$}}} & \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{Trækstyrke $\sigma_{TS}$}} & \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{Densitet $\rho$}} & \multicolumn{1}{|c|}{\cellcolor{aaublue} \textcolor{white}{Pris pr. kg}}\\ \hline
+        
+         \multicolumn{1}{|l|}{\cellcolor{lightgray!20}{EN AW-6082 T6}} & 71 GPa & 255 MPa & 300-340 MPa & 2700 $\frac{kg}{m^3}$ & 244 DKK\\ \hline
+         
+        \multicolumn{1}{|l|}{\cellcolor{lightgray!20}{Rustfri AISI 304 stål}} & 193 GPa & 215 MPa & 500-750 MPa & 7900 $\frac{kg}{m^3}$ & 79 DKK \\ \hline
+        
+        \multicolumn{1}{|l|}{\cellcolor{lightgray!20}{CFRP}} & 70-140 GPa & - & 1000 MPa &  1600 $\frac{kg}{m^3}$ & 800-1200 DKK \\ \hline
+    \end{tabular}
+    \label{tab:materialeegenskaber}
+\end{table}
+
+Sammenfattende viser vurderingen, at materialernes anvendelighed afhænger nøje af de specifikke krav til den enkelte komponent i robotten. EN AW-6082 T6  tilbyder en fordelagtig kombination af lav vægt, god bearbejdelighed og moderat styrke. konstruktionstål giver høj stivhed og styrke til en lav pris, men med en øget vægt. Kulfiberforstærket polymer fremstår som det letteste og mest stive alternativ i bestemte retninger, men til en høj materialepris og med begrænsninger i forhold til bearbejdning og genanvendelse. Grundet dets høje pris og omfattende fremstilling fravælges CFRP. Derfor vælges det at robotten skal fremstilles i EN AW-6082 T6 og stål. Her vælges det at størstedelen af konstruktionen skal produceres i aluminium, og sliddele skal produceres i stål for at øge produktets levetid.
+
+
+%- Erstatte alu med plast i dele vi selv har designet \\

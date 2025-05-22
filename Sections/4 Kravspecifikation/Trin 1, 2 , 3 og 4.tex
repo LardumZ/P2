@@ -1,0 +1,135 @@
+\subsection{Trin 1, 2, 3 og 4 - Identifikation af kunder, ønsker, vægtning og konkurrenter} \label{Trin 1-4}
+
+\textbf{Trin 1} har til formål, at identificerer kunder og interessenter. I dette projekt, er der ingen konkret kunde, så i de følgende trin er kunders ønsker og vægtninger baseret på kapitel \ref{Problemanalyse} Problemanalyse. 
+ 
+\textbf{Trin 2} identificerer kunders ønsker på baggrund af problemanalysen, ved vurdering af, hvad potentielle kunder vægter relevant for en speckle pattern robot. De identificerede ønsker kan ses i tabel \ref{tab: trin 1 til 4} sammen med vægtningen af de enkelte ønsker, som kommer fra trin 3. 
+
+\textbf{Trin 3} vurderer kundens ønsker i forhold til, hvor vigtigt de antages at være baseret på problemanalysen (\ref{Problemanalyse}). Vægtningerne er lavet ved at fordele 100 point mellem de ti ønsker, hvor vigtigere ønsker får tildelt flere point, og mindre vigtige ønsker får tildelt færre point. At begrænse vægtningen til et total på 100 point tvinger en prioritering af ønskerne. 
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[H]
+    \caption{Vægtning af ønsker ved fordeling af 100 point. Vurdering af hvor godt konkurrenter opfylder kundernes ønsker fra fra 0 til 5. 0 = Opfylder overhovedt ikke ønsket, 1 = Minimal opfyldelse af ønsket, 2 = Lille opfyldelse af ønsket, 3 = Tildels opfyldelse af ønsket, 4 = Stor opfyldelse af ønsket og 5 = Fuldstændig opfyldelse af ønsket.}
+    \centering
+    \begin{tabular}{|l|c||c|c|c|c|} \cline{3-6}\cline{3-6}
+    %Konkurrenter
+        \multicolumn{2}{c|}{} & \rotatebox{90}{\hspace{-.3cm} \cellcolor{lightgray!20} \textbf{Stempel ruller}} & \rotatebox{90}{\hspace{-.3cm} \cellcolor{lightgray!20} \textbf{Tusch / tegneredskab}}  & \rotatebox{90}{\hspace{-.2cm} \cellcolor{lightgray!20}\textbf{Spraymaling}} & \rotatebox{90}{\hspace{-.3cm} \cellcolor{lightgray!20} \textbf{Midlertidig tatovering} \hspace{.2cm}}\\ 
+         
+    % Header med Ønsker og vægtning
+      \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Ønsker}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Vægtning}}} & \multicolumn{4}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Konkurrenter}}} \\ \specialrule{0pt}{0.5pt}{0pt} \hline 
+
+    %værdier
+        1. Producere et godt speckle pattern & 20 & 4 & 3 & 2 & 4\\ \hline
+        2. Genskabelighed & 11 & 3 & 0 & 0 & 4 \\ \hline
+        3. Håndtere forskellige emnestørrelser og former & 14 & 4 & 5 & 4 & 4 \\ \hline
+        4. Håndtere forskellige materialer & 12 & 4 & 4 & 4 & 4 \\ \hline
+        5. Hurtig fremstilling af speckle pattern & 10 & 4 & 1 & 5 & 3\\ \hline
+        6. Brugervenlighed & 8 & 4 & 5 &3 & 3\\ \hline
+        7. Lang levetid & 4 & 4 &1 & 1 & 0\\ \hline
+        8. Lav arbejdsbyrde & 14 & 3 & 0 & 3 & 3\\ \hline
+        9. Lav førstegangspris & 3 & 1 & 5 & 4 & 2\\ \hline
+        10. Lav brugspris & 4 & 3 & 4 & 4 & 3 \\ \hline \specialrule{0pt}{0.8pt}{0pt} \cline{2-6}
+        \multicolumn{1}{r|}{\textbf{SUM}} & 100 & 34 & 28 & 30 & 29 \\ \cline{2-6}
+    \end{tabular}
+    \label{tab: trin 1 til 4}
+\end{table} \plainbreak{-0.5}
+
+Det vurderes, at det vigtigste ønske, er ønske 1, om at producere et godt speckle pattern, fordi nøjagtigheden af DIC afhænger af kvaliteten af det anvendte speckle pattern, som det fremgår af afsnit \ref{Speckle pattern}. 
+
+Ønske 3 om håndtering af forskellige emnestørrelse og former, samt ønske 8 om lav arbejdsbyrde tildeles begge 14 point, og er de næstvigtigste ønsker, fordi nuværende metoder til fremstilling af speckle pattern i makroskala, kræver at en person er manuelt involveret under det meste af processen. Det ses derfor som et konkurrencepunkt hvis arbejdsbyrden og tiden kan nedsættes ved automatisering af en robot. På baggrund af afsnit \ref{Fremstilling af Speckle pattern} har ønske 4 om at håndtere forksellige materialer fået 12 point. Dette er grundet DIC i dag anvendes på mange forskellige emnestørrelser og materialer, så det er fordelagtigt, hvis løsningen ikke er begrænset til en enkelt emnestørrelse eller materiale. 
+
+De sidste ønsker, som ikke er nævnt, har en mindre vægtning. De er derfor ikke lige så relevante som de nævnte ønsker, og deres vægtning bliver dermed ikke forklaret yderligere. Alle vægtningerne kan ses i figur \ref{tab: trin 1 til 4}.
+
+
+\textbf{Trin 4} ses til højre i tabel \ref{tab: trin 1 til 4}, hvor konkurrenterne vurderes på baggrund af ønskerne. Vurderingen af konkurrenter sker, for at identificerer ønsker, hvor der er mulighed for at skabe konkurrencepunkter. Fra afsnit \ref{Fremstilling af Speckle pattern} er stempel ruller, tusch/tegneredskab, spraymaling og midlertidig tatovering valgt som konkurrenter. Disse vægtes på en skala fra 0 til 5: %, disse kan ses i tabel \ref{...}:
+
+
+\newcommand{\myhash}{\raisebox{\depth}{\#}}
+\begin{enumerate}[font=\bfseries]\addtocounter{enumi}{-1}
+    \item Opfylder overhovedet ikke ønsket 
+    \item Minimal opfyldelse af ønsket 
+    \item Lille opfyldelse af ønsket 
+    \item Tildels opfyldelse af ønsket 
+    \item Stor opfyldelse af ønsket 
+    \item Fuldstændig opfyldelse af ønsket 
+\end{enumerate}
+
+
+Vurdering af konkurrenterne sker på baggrund af afsnit \ref{Fremstilling af Speckle pattern} i problemanalysen. Stempelruller og midlertidig tatoveringer får begge 4 point i ønske 1, hvor de øvrige får mindre. Dette betyder, at en endelig løsning helst skal have $\geq 4$, medmindre løsningen excellerer på andre områder, fordi ønsket har fået 20 point. Konkurrenterne får henholdsvis 3, 0, 3 og 3 point i ønske 8 om lav arbejdsbyrde, som er det ønske der vægtes anden højest. Det vurderes derfor, at lav arbejdsbyrde er et af de områder, som en løsningen kan differentiere sig fra konkurrenterne på. Det forventes at førstegangsprisen og brugsprisen af en robot som løsning, overstiger både tuscher og spraymaling. Løsningen vil stadig have markedspotentiale, da disse ønsker er vurderet lavest. 
+
+ 
+
+
+
+\begin{comment}
+Tidligere tabeller:
+
+  \begin{table}[H]
+    \caption{Vægtede ønsker}
+    \centering
+    \begin{tabular}{|l|c|}\hline
+     \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Ønsker}}} &  \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Vægtning (ud af 100)}}} \\ \specialrule{0pt}{0.5pt}{0pt} \hline 
+        1. Producere et godt speckle pattern & 20 \\ \hline
+        2. Genskabelighed & 11\\ \hline
+        3. Håndtere forskellige emnerstørrelser og former & 13 \\ \hline
+        4. Håndtere forskellige materialer & 13 \\ \hline
+        5. Hurtig fremstilling af speckle pattern & 10\\ \hline
+        6. Brugervenlighed & 8\\ \hline
+        7. Lang levetid & 4\\ \hline
+        8. Lav arbejdsbyrde & 14 \\ \hline
+        9. Lav førstegangspris & 3\\ \hline
+        10. Lav brugspris & 4\\ \hline
+    \end{tabular}
+    \label{tab:vægønsker}
+\end{table} 
+
+
+
+\begin{table}[H]
+    \centering
+    \caption{Kundens vurdering af konkurrenternes produkter}
+    \renewcommand{\arraystretch}{1.3} 
+    \setlength{\tabcolsep}{8pt} 
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c||c|}
+        \hline
+        \rowcolor{lightgray!20} \cellcolor{aaublue}\textcolor{white}{ \textbf{ Ønske nr.}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{sum} \\ \hline 
+        \specialrule{0pt}{0.5pt}{0pt} \hline 
+        
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Stempel ruller}}} & 4 & 3 & 4 & 4 & 4 & 4 & 4 & 3 & 1 & 3 & 34 \\ 
+        \hline
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{tusch / tegneredskab}}} & 3 & 0 & 5 & 4 & 1 & 5 & 1 & 0 & 5 & 4 & 28 \\ 
+        \hline
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Spraymaling}}} & 2 & 0 & 4 & 4 & 5 & 3 & 1 & 3 & 4 & 4 & 30 \\ 
+        \hline
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Midlertidig tatovering}}}  & 4 & 4 & 4 & 4 & 3 & 3 & 0 & 3 & 1 & 3 & 29 \\ 
+        \hline
+    \end{tabular}
+    \label{Tab: Kunde vs. konk.}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{Vægtede ønsker fra 0 til 100}
+    \centering
+    \begin{tabular}{|l|c | p{.1pt}|c|c|c|c|} \cline{4-6}\cline{4-7}
+    %Konkurrenter
+        \multicolumn{3}{c|}{}  & \rotatebox{90}{\hspace{-.3cm} \cellcolor{lightgray!20} \textbf{Stempel ruller}} & \rotatebox{90}{\hspace{-.3cm} \cellcolor{lightgray!20} \textbf{tusch / tegneredskab}}  & \rotatebox{90}{\hspace{-.2cm} \cellcolor{lightgray!20}\textbf{Spraymaling}} & \rotatebox{90}{\hspace{-.2cm} \cellcolor{lightgray!20}\textbf{Midlertidig tatovering}}\\ 
+         
+    % Header med Ønsker og vægtning
+      \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Ønsker}}} & \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Vægtning}}} & ~ & \multicolumn{4}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Konkurrenter}}} \\ \specialrule{0pt}{0.5pt}{0pt} \cline{1-2} \cline{4-7}
+
+    %værdier
+        1. Producere et godt speckle pattern & 20 & ~ &  4 & 3 & 2 & 4\\ \cline{1-2} \cline{4-7}
+        2. Genskabelighed & 11 & ~ & 3 & 0 & 0 & 4 \\ \cline{1-2} \cline{4-7}
+        3. Håndtere forskellige emnerstørrelser og former & 13 & ~ & 4 & 5 & 4 & 4 \\ \cline{1-2} \cline{4-7}
+        4. Håndtere forskellige materialer & 13 &  ~& 4 & 4 & 4 & 4 \\ \cline{1-2} \cline{4-7}
+        5. Hurtig fremstilling af speckle pattern & 10 &  ~& 4 & 1 & 5 & 3\\ \cline{1-2} \cline{4-7}
+        6. Brugervenlighed & 8 &  ~& 4 & 5 &3 & 3\\ \cline{1-2} \cline{4-7}
+        7. Lang levetid & 4 & ~ & 4 &1 & 1 & 0\\ \cline{1-2} \cline{4-7}
+        8. Lav arbejdsbyrde & 14 &  ~&3 & 0 & 3 & 3\\ \cline{1-2} \cline{4-7}
+        9. Lav førstegangspris & 3 & ~ & 1 & 5 & 4 & 2\\ \cline{1-2} \cline{4-7}
+        10. Lav brugspris & 4 & ~ & 3 & 4 & 4 & 3 \\ \cline{1-2} \cline{4-7} \specialrule{0pt}{0.8pt}{0pt} \cline{4-7}
+        \multicolumn{3}{r|}{\textbf{SUM}}  & 34 & 28 & 30 & 29 \\ \cline{4-7}
+    \end{tabular}
+    \label{tab: trin 1 til 4}
+\end{table}
+\end{comment}

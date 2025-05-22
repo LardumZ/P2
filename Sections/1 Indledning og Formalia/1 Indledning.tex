@@ -1,0 +1,39 @@
+\chapter{Indledning}
+Digital Image Correlation (DIC) er en optisk målemetode, der anvendes til at vurdere spændinger i forhold til deformationer i materialer ved at analysere ændringer i digitale billeder af emner, før og efter belastning. DIC gør det muligt, at få målinger over større områder, hvor deformationer kan observeres og kvantificeres. Dette gør at DIC er en god metode til at undersøge komplicerede emner, i forhold til andre måleværktøjer som strain gauges og extensometre.
+
+Et centralt element i DIC er brugen af speckle patterns, tilfældigt fordelte prikker, som påføres overfladen af testemnet. Den nuværende, manuelle påføring af speckle patterns, herunder airbrush, spraymaling eller tusch, er ofte tidskrævende og kan resultere i mønstre der ikke er optimale. Dette påvirker både målenøjagtigheden og genskabeligheden af DIC-analyser. Automatisering kan skabe et mere optimalt speckle pattern, samt åbne muligheden for genskabelige speckle patterns og dermed forbedre nøjagtigheden og pålideligheden af metoden.
+
+Dette projekt fokuserer på mekaniske aspekter ved design af en robot til påføring af speckle patterns i makroskala på et 2D-plan. Gennem analysen af krav til DIC-metoden og speckle patterns, samt vurdering af eksisterende løsninger, udarbejdes et produkt, der har til formål at øge kvaliteten af DIC-metoden, samt reducerer arbejdsbyrden.
+
+
+
+
+\plainbreak{2}
+\section{Initierende problemstilling}
+Projektet udarbejdes på baggrund af den følgende initierende problemstilling: \plainbreak{-0.1}
+\begin{displayquote}  \centering 
+\textit{Hvordan automatiseres påføringen af speckle patterns egnet til Digital Image Correlation ved brug af en robot.} %(til undersøgelse af materiale egenskaber).
+\end{displayquote}
+
+
+\begin{comment}
+    Det kan evt, bruges i indledningen, at det har en præcision på 93%
+    
+    "The  suggested  measurement  method  has an  average  accuracy  of  more  than  93%  in estimating specimen displacements." https://www.researchgate.net/publication/374375688_Application_of_Digital_Image_Correlation_Method_in_Materials_-_Testing_And_Measurements_A_Review
+
+    Digital Image Correlation (DIC) er en optisk målemetode, der anvendes til analyse af deformationer og spændinger i materialer, ved sammenligning af billeder fra en prøve før og efter belastning. Metoden er kendt for sin høje nøjagtighed, med en gennemsnitlig præcision på mere end 93\%, sammenlignet med strain gauge, og linear variable differential transformer (LVDT) \parencite{Zaya2023ApplicationReview}. 
+
+Et godt speckle pattern opfylder en række af kriterier: det skal have en passende kontrast mellem de lyse og mørke områder i mønsteret, en tilfældig fordeling af prikker uden gentagelser samt en passende prikstørrelse i forhold til kameraets opløsning og overfladen på det testet materiale. Normalt påføres speckle patterns manuelt ved hjælp af en airbrush, spraymaling eller med en kuglepen, men denne manuelle proces kan føre til variationer i kvaliteten i mønsteret, hvilket kan påvirke både nøjagtigheden af målingerne og genskabeligheden af DIC-analysen.
+
+For at imødekomme disse udfordringer kan automatisering med en robot være en løsning, der sikrer ensartede mønstre med præcist kontrollerede forhold. Dette kan forbedre nøjagtigheden af DIC-målinger og gøre processen mere effektiv og reproducerbar.
+
+\textbf{\textit{Kommentare fra vejledermødet:\\}}
+-Snakke om DIC og den kontekst det bruges i, og hvorfor det er vigtigt og hvorfor det er smart, at lave et helt projekt om en lille del af DIC. \\
+-Gør det tydeligt, hvad motivationen for at lave en robot til speckle pattern er. 
+-DIC er ikke kendt for høj nøjagtighed - 93\% er ikke højt. Det er brugt til at vurdere deformationer i hele objektet frem for observerbare dele. \\
+-LVDT er formentlig et extensiometer. Der bruges primært strain gauges, LVDT og DIC. \\
+- DIC er ikke præcis, men man kan få full field målinger, fremfor kun på enkelte punkter.  \\
+- Forklar hvad et speckle pattern er i indledningen.  
+
+\end{comment}
+

@@ -1,0 +1,86 @@
+\subsection{Screening af koncepter til kontrolsystem} \label{Kontrolsystem - vurdering}
+
+De 20 konceptforslag til kontrolsystemet fra den morfologiske analyse i afsnit \ref{Morf - kontrolsystem} gennemgår en screen ved brug at et Pugh skema. Pugh skema er udført på samme måde som for de mekaniske dele i afsnit \ref{Mekanisk system - vurdering}, ved at hver delløsninger blev vurderet i forhold til opstillede vurderingskriterier baseret ønsker og designspecifikationer fra kapitel \ref{Konceptgenerering}. Hvert konceptforslags vurdering er summen af point fra de enkelte delkoncepter som konceptforslaget er samlet af. Delkoncepterne i konceptforslag 1 er referencepunktet, som de øvrige delkoncepter vurderes ud fra. Delløsningernes vurderinger kan ses i bilag \ref{Bilag brugerflade delkonceptervurdering}. 
+
+Hvert vurderingskriterie fik tildelt en vægt i form af et heltal fra 1-4, for at klargøre hvilket kriterie der er vigtigst. Vægtene er baseret på baggrund af vægtningerne fra kundens ønsker, samt designspecifikationer fra HoQ i kap. \ref{Kravspecifikation}.
+
+
+
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Pugh skema. Koncepternes værdier til de forskellige kriterier, er summen af værdier fra et koncepts delløsninger. Delløsningernes vurdering kan ses i bilag \ref{Bilag brugerflade delkonceptervurdering} og konceptforslagene bilag \ref{Bilag - konceptforsalg til kontrolsystem} Vægtningen af hvert vurderingskriterie er angivet med "V" og ses i kolonnen længst til højre.}
+    \begin{tabular}{|p{2cm}|c c c c c c c c c c c|} \cline{2-10}
+
+        \multicolumn{1}{c}{}& \multicolumn{10}{|c|}{\cellcolor{aaublue} \small \textcolor{white}{\textbf{Konceptforslag til kontrolsystem}}} \\ \hline
+         
+        \multicolumn{1}{|c|}{\cellcolor{lightgray!20}\textbf{Vurderingskriterier}} & \multicolumn{1}{c||}{\cellcolor{lightgray!20}\textbf{1} \protect\lillacirc}  &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{2 \protect\bluebox}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{3 \protect\cyanbox}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{4 \protect\blueangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{5 \protect\greenangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{6 \protect\gulangle}}  &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{7 \protect\orangeangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{8 \protect\pinkstar}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{9 \protect\redkant}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{10 $\protect\mathcolor{BrickRed}{\clubsuit}$}} &\multicolumn{1}{||r|}{\cellcolor{lightgray!20}\textbf{V}} \\ \hline
+         
+    %% Vurdering
+        % Hurtighed/tid i processen
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Hurtighed/tid i processen}}} 
+         & \multicolumn{1}{c||}{0} & 0 & -1 & -1 & -2 & -1 & -1 & -2 & -2 & -3 & \multicolumn{1}{||c|}{3}\\ \hline
+        % Brugervenlighed  
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Brugervenlighed}}} 
+         & \multicolumn{1}{c||}{0} & 0 & 0 & -1 & -2 & 0 & 0 & 0 & -1 & -2 & \multicolumn{1}{||c|}{4} \\ \hline
+        % Holdbarhed
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Holdbarhed}}} 
+         & \multicolumn{1}{c||}{0} & 0 & -1 & 0 & -1 & 1 & 1 & 0 & 1 & 0 & \multicolumn{1}{||c|}{2} \\\hline
+        % Kompleksitet af Fremstilling
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize\textbf{Kompleksitet ved fremstilling}}} 
+         & \multicolumn{1}{c||}{0} & 0 & -1 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & \multicolumn{1}{||c|}{1} \\\hline
+        % Kompleksitet af Samling
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize\textbf{Kompleksitet ved samling}}} 
+         & \multicolumn{1}{c||}{0} & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & \multicolumn{1}{||c|}{2} \\\hline
+        % Forskellige emne former
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Forskellige emne former}}} 
+         & \multicolumn{1}{c||}{0} & 1 & -1 & 0 & -1 & 0 & 1 & -1 & 0 & -1 & \multicolumn{1}{||c|}{3} \\\hline
+%% Samlet score og rank
+        \specialrule{0pt}{2pt}{0pt} \cline{1-11}
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10} \textbf{Samlet score}}& \multicolumn{1}{c||}{0} & 2 & -4 & -1 & -6 & 1 & 3 & -3 & 0 & -5 & \multicolumn{1}{|c}{} \\\cline{1-11}
+        
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10} \textbf{Vægtet score}}& \multicolumn{1}{c||}{0} & 5 & -9 & -5 & -19 & 0 & 5 & -9 & -5 & -19 &\multicolumn{1}{|c}{} \\\cline{1-11} 
+
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10}\textbf{Rangering}}& \multicolumn{1}{c||}{7} & 3 & 15 & 11 & 19 & 7 &  3 & 15 & 11 & 19 & \multicolumn{1}{|c}{} \\\cline{1-11}
+
+ 
+%% 11-20
+        \specialrule{0pt}{5pt}{0pt} \hline
+        \multicolumn{1}{|c|}{\cellcolor{lightgray!20}\textbf{Vurderingskriterier}} & \multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{11 \protect\lillacircny}}  &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{12 \protect\blueboxny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{13 \protect\cyanboxny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{14 \protect\blueangleny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{15 \protect\greenangleny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{16 \protect\gulangleny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{17 \protect\orangeangleny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{18 \protect\pinkstarny}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{19 \protect\redkantnyy}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{20 $\protect\mathcolor{BrickRed}{\spadesuit}$}} & \multicolumn{1}{||r|}{\cellcolor{lightgray!20}\textbf{V}} \\ \hline
+         
+%% Vurdering
+        % Hurtighed/tid i processen
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{\scriptsize Hurtighed/tid i processen}}} 
+         & 0 & 0 & -1 & -1 & -2 & 1 & 1 & 0 & 0 & -1 & \multicolumn{1}{||c|}{3} \\ \hline
+        % Brugervenlighed  
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Brugervenlighed}}} 
+         & 0 & 0 & 0 & -1 & -2 & 0 & 0 & 0 & -1 & -2 & \multicolumn{1}{||c|}{4} \\ \hline
+        % Holdbarhed
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Holdbarhed}}} 
+         & 1 & 1 & 0 & -1 & -2 & 0 & 0 & 0 & -1 & -2 & \multicolumn{1}{||c|}{2} \\\hline
+        % Kompleksitet af Fremstilling
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Kompleksitet ved fremstilling}}} 
+         & 0 & 0 & -1 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & \multicolumn{1}{||c|}{1} \\\hline
+        % Kompleksitet af Samling
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Kompleksitet ved samling}}} 
+         & 1 & 2 & 1 & 2 & 1 & 0 & 1 & 0 & 1 & 0 & \multicolumn{1}{||c|}{2} \\\hline
+        % Forskellige emne former
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\scriptsize \textbf{Forskellige emne former}}} 
+         & 0 & 1 & -1 & 0 & -1 & 0 & 1 & -1 & 0 & -1 & \multicolumn{1}{||c|}{3} \\\hline
+         \specialrule{0pt}{2pt}{0pt} \cline{1-11}
+%% Samlet score og rank
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10} \textbf{Samlet score}}& 2 & 4 & -2 & 1 & -4 & 1 & 3 & -3 & 0 & \multicolumn{1}{c}{-5} & \multicolumn{1}{|c}{} \\\cline{1-11}
+        
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10} \textbf{Vægtet score}}& 4 & 9 & -5 & -1 & -15 & 2 & 7 & -7 & -3 & \multicolumn{1}{c}{-17} &\multicolumn{1}{|c}{} \\\cline{1-11} 
+        
+        \multicolumn{1}{|r|}{\cellcolor{lightgray!10}\textbf{Rangering}} & 5 & \multicolumn{1}{c}{\cellcolor{OliveGreen} \textcolor{white}{\textbf{1}}} & 11 & 9 & 17 & 6 &  \multicolumn{1}{c}{\cellcolor{OliveGreen} \textcolor{white}{\textbf{2}}} & 14 & 10 & \multicolumn{1}{c}{18} & \multicolumn{1}{|c}{} \\\cline{1-11}
+    \end{tabular}
+    \label{tab:selektionsskema kontrolsystem}
+\end{table}
+\plainbreak{1}
+Screeningen af kontrolsystemet resulterede i at koncept 12 17, var de to topkandidater. Begge koncepter gør brug af et kamera til kalibrering i forhold til emne, og adskiller sig derved fra brugerfladen. Koncept 12 gør brug af en ekstern computer, som brugeren selv medbringer, hvorimod koncept 17 gør brug af en touch skærm. Det er vurderet at en løsning, der ikke kræver at brugeren skal en computer med en bestemt software, vil være et mere brugervenligt produkt. Denne vurdering har resulteret i, at koncept 17 er blevet valgt som det endelige kontrolsystem koncept.
+
+%Processen mod et endeligt koncept, for et kontrolsystem, starter med en screening, lavet på samme måde som screeningen for de mekaniske dele. I kontrolsystemet findes to forskellige funktioner, der skal løses, hvortil der er henholdsvis fire og fem delløsninger. Det lave antal af del funktioner og delløsninger, betyder at der er tyve forskellige kombinationer, hvilket er blevet vurderet til at være en tilpas lille mængde, til at alle koncepter er blevet vurderet., og et koncepts samlet vurdering var baseret ud fra summen af points fra delløsningerne.
+%Vurdering fungerer ved at koncept 1's delløsninger alle er standarder/referencevurderinger, de andre delløsninger vurderes dertil i forhold til koncept 1. Vurderingskriterierne kan ses i tabel \ref{tab:selektionsskema kontrolsystem}.
+

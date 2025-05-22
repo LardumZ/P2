@@ -1,0 +1,119 @@
+\subsection{Koncept screening af mekaniske dele} \label{Mekanisk system - vurdering}
+%- Tush er mere præcis i prikstørrelse end åbne/lukke \\
+%- Delta robot hurtigere end lineær bevægelse \\
+For at finde frem til et endeligt løsningskoncept for de mekaniske dele, vurderes de ni udvalgte koncepter igennem en screening. De udvalgte koncepter vurderes ud for et sæt af kriterier, som kan ses i tabel \ref{tab:selektionsskema mekanisk}. Alle delløsninger, som koncepterne består af, er blevet vurderet i forhold til kriterierne(se bilag \ref{Bilag mekaniske delkonceptervurdering}), hvortil de samlede værdier af et koncepts delløsninger, er lig konceptets samlede vurdering. Vurderingerne er sket ved at sætte koncept 1's (\lillacirc) delløsninger som en standard/reference, og dertil vurdere de andre delløsninger, i forhold til koncept 1. Hvert kriterie er tildelt en vægt, som sikrer vigtigere kriterier har større betydning for udfaldet. Vægtene er fremsat på baggrund af vægtningerne fra kapitel \ref{Trin 1-4}, tabel \ref{tab: trin 1 til 4}, og designspecifikationer fra HoQ i kapitel \ref{Kravspecifikation}.
+
+\renewcommand{\arraystretch}{1.6}
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Screening skema. Værdierne er summen af delkoncepternes vurdering som ses i bilag \ref{Bilag mekaniske delkonceptervurdering}.}
+    \begin{tabular}{|l|c||c c c c c c c c||r|} \cline{2-10}
+
+        \multicolumn{1}{c}{}& \multicolumn{9}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Konceptforslag til mekaniske dele}}} \\ \hline
+         
+        \multicolumn{1}{|c}{\cellcolor{lightgray!20}\textbf{Vurderingskriterier}} & \multicolumn{1}{|c||}{\cellcolor{lightgray!20}\textbf{1 \protect\lillacirc}}  &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{2 \protect\bluebox}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{3 \protect\cyanbox}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{4 \protect\blueangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{5 \protect\greenangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{6 \protect\gulangle}}   &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{7 \protect\orangeangle}} &\multicolumn{1}{c}{\cellcolor{lightgray!20}\textbf{8 \protect\pinkstar}} &\multicolumn{1}{c||}{\cellcolor{lightgray!20}\textbf{9 \protect\redkant}} &\multicolumn{1}{r|}{\cellcolor{lightgray!20}\textbf{Vægt}} \\ \hline
+         
+    %% Vurdering
+        % Præcision af prik størrelse
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Præcision af prik størrelse}}} 
+         & 0 & 0 & 0 & 0 & 0 & -1 & -1 & -1 & -1 & 3\\ \hline
+        % Præcision af prik placering  
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Præcision af prik placering}}} 
+         & 0 & 0 & -1 & -1 & -1 & 1 & 1 & 0 & 1 & 3 \\ \hline
+        % Fastholdelse
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Fastholdelse}}} 
+         & 0 & 0 & 1 & -3 & 0 & 1 & 1 & 1 & 0 & 5  \\\hline
+        % Hurtighed
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Hurtighed}}} 
+         & 0 & 0 & 0 & 2 & -2 & -2 & -1 & -1 & -1 & 2 \\\hline
+        % Brugerinvolvering
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Brugerinvolvering}}} 
+         & 0 & -2 & 0 & 0 & 0 & -1 & -1 & 0 & 0 & 2 \\\hline
+        % Holdbarhed
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Holdbarhed}}} 
+         & 0 & 1 & 0 & 1 & 0 & -1 & 0 & -1 & -1 & 1 \\\hline
+        % Kompleksitet ved fremstilling
+         \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Kompleksitet ved fremstilling}}} 
+         & 0 & 1 & -1 & 1 & 0 & 1 & 2 & 0 & 1 & 1 \\\hline
+        % Kompleksitet ved samling
+        \multicolumn{1}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Kompleksitet ved samling}}} 
+        & 0 & -1 & 0 & 1 & 0 & -1 & 0 & 1 & 1 & 1 \\ \hline \specialrule{0pt}{2pt}{0pt} \cline{1-10}
+%% Samlet score og rank
+         \multicolumn{1}{|r|}{\cellcolor{lightgray!10} \textbf{Vægtet score}}& 0 & -3 & 1 & -11 & -7 & -2 & 3 & 0 & \multicolumn{1}{c|}{-1}  & \multicolumn{1}{c}{} \\\cline{1-10} 
+
+         \multicolumn{1}{|r|}{\cellcolor{lightgray!10}\textbf{Rangering}}& 3 & 7 & \multicolumn{1}{c}{\cellcolor{OliveGreen}\textbf{2}} & 9 & 8 & 6 &  \multicolumn{1}{c}{\cellcolor{OliveGreen}\textbf{1}} & 3 & \multicolumn{1}{c|}{5}  & \multicolumn{1}{c}{} \\\cline{1-10}
+    \end{tabular}
+    \label{tab:selektionsskema mekanisk}
+\end{table} \plainbreak{-0.5}
+
+Ud fra screeningen blev koncept 3 (\cyanbox) og 7 (\orangeangle) vurderet til at være de to bedste kandidater. De to konceptforslags forskellige delløsninger blev sammenlignet, for at undersøge om en kombination, af de to eventuelt kunne skabe et bedre koncept. Det resulterede i, at koncept 7 i kombination med koncept 3's sæt prik delløsning, vil øge præcisionen og derved danne det bedste koncept. Det sammensatte koncept 10 ($\protect\mathcolor{BrickRed}{\clubsuit}$) (bilag \ref{Bilag mekaniske delkonceptervurdering}) får 4 point i den vægtede score, hvilket er 1 point mere end konceptforslag 7. Screeningsskemaet for det endelige koncept kan ses i bilag \ref{Bilag mekaniske delkonceptervurdering}. 
+
+
+
+\begin{comment}
+\begin{table}[H]
+    \caption{}
+    \centering
+    \begin{tabular}{|c|c|c|c|} 
+        \hline
+        \multicolumn{4}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Endelig mekanisk koncept }}} \\ \hline
+        \rowcolor{lightgray!10} Bevægelse & Sætte prikker& Indspænding & Understøttelse \\ \hline
+        \multicolumn{1}{|p{3.4cm}|}{
+        \includegraphics[width=0.80\linewidth]{Sections/5 Konceptgenerering/Media/lineær.png}} &  
+        \multicolumn{1}{p{3.4cm}|}{\includegraphics[width=0.80\linewidth]{Sections/5 Konceptgenerering/Media/åbnelukke.png}} &
+        \multicolumn{1}{p{3.4cm}|}{\includegraphics[width=0.80\linewidth]{Sections/5 Konceptgenerering/Media/Press på emnet.png}} &
+        \multicolumn{1}{p{3.4cm}|}{ \includegraphics[width=0.80\linewidth]{Sections/5 Konceptgenerering/Media/Understøttelse plade.png}} \\ \hline
+    \end{tabular}
+    \label{tab: endeligkonceptmekanisk}
+\end{table}
+\end{comment}
+
+
+
+\begin{comment}
+\begin{table}[H]
+    \centering
+    \caption{Selektion skema, hvor 0 = neutral, + = bedre end og - = værre end.  Den samlet score er beregnet ved "Sam af +" + "Sum af -"}
+    \begin{tabular}{|>{\columncolor{lightgray!20}}c|c|c|*{1}{>{\centering\arraybackslash}p{.4cm}} || *{8}{>{\centering\arraybackslash}p{.4cm}|}} \cline{4-12}
+
+        \multicolumn{3}{c}{}& \multicolumn{9}{|c|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Konceptforslag til mekaniske dele}}} \\ \cline{4-12}
+         
+        \multicolumn{3}{c}{} & \multicolumn{1}{|c||}{\cellcolor{lightgray!20}\textbf{1}}  &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{2}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{3}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{4}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{5}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{6}}   &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{7}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{8}} &\multicolumn{1}{c|}{\cellcolor{lightgray!20}\textbf{9}} \\ \hline
+         
+    %% Vurdering
+        % Præcision af prik størrelse
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Præcision af prik størrelse}}} &o &o &o &o &o &+ &+ & + &+\\ \cline{2-12}
+        % Præcision af prik placering  
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Præcision af prik placering}}} &o &o &+ &+ &- &o &o & o & o \\ \cline{2-12}
+        % Fastholdelse
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Fastholdelse}}} &o &+ &o &- &o &+ &+ &o &o \\\cline{2-12}
+        % Alsidighed
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Hurtighed}}} & & & & & & & & & \\\cline{2-12}
+        % Holdbarhed
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Holdbarhed}}} &o &+ &- &+ &- &- &o &o &+  \\\cline{2-12}
+        % Kompleksitet ved fremstilling
+        & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Kompleksitet ved fremstilling}}} &o &+ &- &+ &- &- &o &o &+  \\\cline{2-12}
+        % Kompleksitet ved samling
+        \multirow{-7}{*}{\rotatebox{90}{\textbf{Vurderingskriterier}}} & \multicolumn{2}{|l|}{\cellcolor{aaublue} \textcolor{white}{\textbf{Kompleksitet ved samling}}} & o &o &+ &o &o &o &o &- &o \\ \hline \specialrule{0pt}{2pt}{0pt} \cline{2-12}
+
+%% Summen af værdier
+        % Sum af o
+        \multicolumn{1}{c}{\cellcolor{white}} & \multicolumn{2}{|r|}{\cellcolor{lightgray!10} \textbf{sum af o}} & 8 & &  & & & & & &  \\\cline{2-12}
+        % Sum af +
+        \multicolumn{1}{c}{\cellcolor{white}} & \multicolumn{2}{|r|}{\cellcolor{lightgray!10} \textbf{sum af +}} & 0 & &  & & & & & &  \\\cline{2-12}
+        % Sum af -
+        \multicolumn{1}{c}{\cellcolor{white}} & \multicolumn{2}{|r|}{\cellcolor{lightgray!10} \textbf{sum af -}} & 0 & &  & & & & & &  \\\cline{2-12}  \specialrule{0pt}{2pt}{0pt} \cline{2-12}  
+
+%% Samlet score og rank
+         \multicolumn{1}{c}{\cellcolor{white}} & \multicolumn{2}{|r|}{\cellcolor{lightgray!10} \textbf{Samlet score}}& 0 & &  & & & & & &  \\\cline{2-12}
+
+        \multicolumn{1}{c}{} & \multicolumn{2}{|r|}{\cellcolor{lightgray!10}\textbf{Rangering}} & 5 & &  & & & & & &  \\\cline{2-12}
+    \end{tabular}
+    \label{tab:selektionsskema mekanisk}
+\end{table}
+
+  
+\end{comment}
+ 
+

@@ -1,0 +1,90 @@
+
+\newcounter{forcounter}
+\input{setup/info}
+\input{setup/preamble}
+\addbibresource{setup/Jreferences.bib}
+
+\input{Sections/1 Indledning og Formalia/ordliste}
+
+
+\begin{document}
+\input{bilag/eksterne}
+
+\frontmatter
+
+%\include{formalia/aaufront.tex}
+\include{Sections/1 Indledning og Formalia/frontside}
+\include{Sections/1 Indledning og Formalia/titelblad}
+\chapter*{Forord}
+\input{Sections/1 Indledning og Formalia/forord}
+
+\addcontentsline{toc}{chapter}{Forord}
+\thispagestyle{Unifront}
+\newpage
+\input{Sections/1 Indledning og Formalia/symbolliste.tex}
+\input{Sections/1 Indledning og Formalia/Forkortelser}
+\thispagestyle{Unifront}
+\newpage
+\thispagestyle{Unifront}
+
+\tableofcontents*
+
+\thispagestyle{empty}
+\newpage
+
+\mainmatter
+\pagestyle{Uni}
+\setcounter{page}{1}
+
+% ------  Kaptiler i rapporten -------
+\newpage
+\input{Sections/1 Indledning og Formalia/1 Indledning} 
+
+\input{Sections/2 Problemanalyse/.MAIN}
+
+\input{Sections/3 Problemformulering/Problemformulering}
+
+\input{Sections/4 Kravspecifikation/.MAIN}
+
+\input{Sections/5 Konceptgenerering/.MAIN}
+
+\input{Sections/6 Detaljeløsning/.MAIN}
+
+\input{Sections/7 Konklusion/.MAIN}
+
+\input{Sections/8 Perspektivering/.MAIN}
+
+\label{chap:endOfRapport}
+\newpage
+
+
+\aliaspagestyle{chapter}{Unifrontchap}
+\setcounter{biburllcpenalty}{7111}
+\setcounter{biburlucpenalty}{8111}
+\pagestyle{Unifront}
+\printbibliography
+\appendix
+
+% ----- Bilag ------
+\input{bilag/Bilag - HOQ}
+\input{bilag/Bilag - mekanisk vurdering}
+\input{bilag/Bilag - NEMA 14 Motorkurve}
+\input{bilag/Bilag - strykliste}
+\input{bilag/Bilag - arbejdstegninger}
+%\input{bilag/Bilag - Vurdering af produkt}
+\input{bilag/Bilag - Statik udledninger}
+\input{bilag/Bilag - Beregning}
+\input{bilag/Bilag - morf kontrol}
+\input{bilag/Bilag - Mail fra MEB Smedie og Maskinværksted ApS}
+
+
+
+\label{chap:endOfDocument}
+\newpage
+
+\newpage
+
+\thispagestyle{empty}
+\newpage
+
+\end{document}

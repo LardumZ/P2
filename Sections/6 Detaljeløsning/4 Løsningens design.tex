@@ -1,0 +1,30 @@
+\section{Løsningens design} \label{Dimensionering af stellet}
+
+Designet af de lineære bevægelser og stellet der understøtter dem beskrives i dette afsnit. Her tages udgangspunkt i opfyldelse af følgende præstationskrav. 
+
+\begin{itemize}
+    \item[4.] Størrelse på arbejdsområde på over \SI{200}{mm} $\times$ \SI{150}{mm} $\times$ \SI{50}{mm} 
+    \item[11.] Mængde af forskellige værktøjer til samling på 5 stk.
+    \item[12.] Mængde af specialværktøj til samling af robot på maksimum 1 stk.
+\end{itemize}
+
+Stellet udformes, så arbejdsområdet er over \SI{200}{mm} $\times$ \SI{150}{mm} $\times$ \SI{50}{mm}, med hensyn til følgestænger og ledeskruens diameter. 
+
+
+
+
+%Stellet laves af 40mm \(\times\) 40mm aluminiums t-slots profiler. Dette er med til at gøre motoren mere stabil, så ledeskruen holdes mere stabil, og derigennem kommer mindre afvigelser i præcision under bevægelse.
+
+%Dette er med til at holde sig inden for designspecifikation 3, som kræver en tolerance på under 0,05mm. 
+
+%Fordi der bruges en ledeskrue til bevægelsen, skal der være følgestænger/guide stænger til at tage lasten, så ledskruen ikke udbøjer. Dette giver en højere præcision, fordi grænseværdien i designspecifikation 3 for variation på prikplacering er 0,05mm, hvilket oversættes til, at udbøjningen heller ikke må overstige denne værdi i xy-planet. Det er derfor nødvendigt at kigge på udbøjningen som konsekvens af ladet på stangens acceleration under påføring af speckle pattern. Derudover er det vigtigt at motoren og ledeskruen kan holde den samme tolerance og fart under prikpåføring og bevægelse. Det er derfor relevant at motoren og skruens frekvens ikke er forstyrret, samt at skruens bøjning ikke forstyrrer overførslen af rotation til lineær bevægelse. For at sikre dette, optimeres følgestængerne til at have en udbøjning under 0,1mm, for at mindske effekten af udbøjningen på arbejdet af skruen og motoren. 
+
+%For at opnå den ønskede specifikation på arbejdsområdet, på $200mm\times150mm\times50mm$ fra præstationskrav 4, udformes pladen arbejdsområdet består, med plads til indspænding, hvilket opnås ved at tilføje 35mm mere i hver side. Dette giver plads, til at prikværktøjet kan nå kanterne af arbejdsområdet, da vognen der kører på ledeskruen, har en bredde der gør, at der skal ekstra plads til at hovedet kan placeres over kanten af arbejdsområdet. 
+
+%I den ene ende af stængerne vil der være en motor monteret, som skal sørge for at ledeskruen og derigennem prikværktøjet bliver flyttet i den ønskede retning. Derudover ved motoren vil der være en indspænding til følgestængerne. Motoren er spændt fast til indspændingen og indspændingen er spændt fast til stellet. I den anden ende af ledeskruen sidder der en indspændingsklods, som modtager og fastlåser positionen af ledeskruen og de to følgestænger. Positionen af indspændingsklodsen er fastlåst til stellet, og derigennem er skruen og følgestængernes placering låst til stellet. Dette gør flytningerne langs med skruen minimale, og sørger for, at skruen er stabil, således præcision og fart kan vedligeholdes under bevægelse.
+
+%For at opfylde designspecifikation 4, der kræver dimensioner på arbejdsområdet til $200mm\times150mm\times50mm$. Dette betyder at det skal være muligt at prikke emner inden for disse grænser. For at gøre dette er det nødvendigt at kunne ændre højden af hovedet for at nå en afstand til emnet, hvor prikværktøjet er præcist. Derfor er prikværktøjet indspændt med et dovetailled, som kan løsnes og fastnes med en skrue. Når denne skrue er løsnet er det muligt at bevæge prikværktøjet op og ned med tilstrækkelig præcision, for at afstanden imellem prikværktøjet og prikoverfladen er tilstrækkelig til speckle pattern påføring.
+
+%Designspecifikation 8 kræver et tidsforbrug under 30 sekunder pr. cm${^2}$ til prikplacering. Prikværktøjet er lavet til at kunne prikke i bevægelse, derfor kan den gå fra den ene ende af kvadratcentimeteren til den anden inden den skal bremse. Dette betyder at den skal accelerere og decelerere én gang per bane. De tyndeste prikker der kan laves er 0,1mm, og der vil derfor for at dække hele kvadratcentimeteren skulle 100 baner af 0,1 mm langs de 10 mm for at kunne dække hele kvadratcentimeteren med prikker. Det betyder 100 accelerationer og decelerationer pr. kvadratcentimeter. Der kan altså skrues på en motors topfart og accelerationsevne for at nå dette mål.
+
+%For y-aksens ledeskrue og følgestængerne ikke udbøjer og derved mindsker præcisionen, er de spændt fast i en indspænding, som er monteret til en vogn på den parallelt liggende ledeskrue. Denne indspændingen er udformet så dens vægt tilnærmer sig vægten fra motoren, dette valg med at lave en kontravægt er for at udbøjningen og bevægelsen på de to sæt følgestænger på x-aksen, er så ens som muligt. Denne ens bevægelse er nødvenlig for opretholde den påkrævet præcision, da uens bevægelse vil kunne medføre ledskruen på y-aksen står skævt og derved give fejlplacering i xy-planet. 

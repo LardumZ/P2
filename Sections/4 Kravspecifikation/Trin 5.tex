@@ -1,0 +1,48 @@
+\subsection{Trin 5 - Udarbejdelse af designspecifikationer} \label{Trin 5}
+Det femte trin har til formål, at omsætte ønsker til målbare designspecifikationer, der muliggører konkrete og målbare test af den endeligt løsning. Designspecifikationerne beskrives i dette afsnit og kan ses i tabel \ref{tab:krav}.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[H]
+    \centering
+     \caption{Design specifikationer.For optimerings retningen (OR) betyder \textbf{--} en fastlagt værdi, $\blacktriangledown$ betyder specifikationen forbedres når værdien mindskes og $\blacktriangle$ betyder specifikationen forbedres når værdien øges}
+    \begin{tabular}{|l|c|c|} \hline
+     \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Designspecifikation}}} &  \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Enhed}}} &  \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{OR}}} \\ \specialrule{0pt}{0.5pt}{0pt} \hline 
+        1. Prikstørrelse& mm & \textbf{--} \\ \hline
+        2. Variation på prikstørrelser & mm & $\blacktriangledown$ \\ \hline
+        3. Variation på prikplacering & mm & $\blacktriangledown$ \\ \hline
+        4. Størrelse af arbejdsområdet & mm & $\blacktriangle$\\ \hline
+        5. Flytning af emnet under fremstilling af speckle pattern & mm & $\blacktriangledown$\\ \hline
+        6. Antal forskellige farvemidler til speckle pattern & Farvemidler & $\blacktriangle$ \\ \hline
+        7. Kontrast mellem prik og baggrund	& -- & $\blacktriangle$ \\ \hline
+        8. Tidsforbrug på prikplacering & $\SI{}{s/cm^2}$ & $\blacktriangledown$ \\ \hline
+        9. Brugerinvolvering under process & min & $\blacktriangledown$\\ \hline
+        10. Tid brugt på opsætning  & min & $\blacktriangledown$\\ \hline
+        11. Antal værktøj til at samle hele produktet & Værktøj & $\blacktriangledown$ \\ \hline
+        12. Antal specialværktøj til at samle hele produktet & Værktøj & $\blacktriangledown$\\ \hline
+    \end{tabular}
+    \label{tab:krav}
+\end{table}
+
+\textbf{1. Prikstørrelse} er valgt på baggrund af ønske 3 om forskellige emnestørrelser og former. Denne designspecifikation beskriver det spænd af prikstørrelser løsningen kan producere. 
+
+\textbf{2. Variation på prikstørrelser} beskriver den acceptable afvigelse fra den valgte prikstørrelse. For at kunne producere et godt speckle pattern skal denne variation minimeres.
+
+\textbf{3. Variation af prikplacering} beskriver den acceptable afvigelse fra den teoretiske placering og den virkelige placering. Dette er valgt på baggrund af den høje vægtning tildelt ønske 2 om genskabelighed. 
+
+\textbf{4. Størrelse af arbejdsområdet} sættes som desingspecifikation, fordi det skal være muligt, at sætte prikker på forskellige størrelser emner, som det fremgår af ønske 3. 
+
+\textbf{5. Fastholdelse af emnet} sikrer et godt speckle pattern som der vægtes i ønske 1. Det er en nødvendighed, at emnet ikke bevæger sig under påføring, således robotten kan overføre det ønskede speckle pattern så præcist som muligt.
+
+\textbf{6. Antal forskellige farvemidler til speckle pattern} skal sikre, at produktet kan skabe speckle patterns på alle emnematerialer ved at inkludere flere forskellige farvemidler, så farver og materialer altid fungere optimalt i forhold til det enkelte emne.
+
+\textbf{7. Kontrast mellem prik og baggrund} er en nødvendighed for at have et godt speckle pattern, som der ønskes i ønske 1. Det beskriver forholdet i lysstyrke mellem prik og emnet.
+
+\textbf{8. Tidsforbrug på prikplacering} kommer direkte fra ønske 5 om hurtig fremstilling af speckle patterns. 
+
+\textbf{9. Brugerinvolvering under proces} specificeres som den mængde tid, brugeren skal bruge efter de har sat processen i gang. Dette skal minimeres for at opfylde ønske 6 samt 8. En løsning der kræver at brugeren observerer den under processen er ikke brugervenlig.
+  
+\textbf{10. Tid brugt på opsætning} er en faktor i ønske 6 og 8. Dette beskriver tiden brugt på at sætte processen i gang.
+
+\textbf{11. Antal værktøj til at samle hele produktet} har en effekt på hvor intuitiv løsningen er at samle. For at lave produktet brugervenligt, ønskes antallet derved så lavt som muligt.
+
+\textbf{12. Antal specialværktøj til at samle hele produktet} er til for at holde løsningen brugervenlig som mulig, da løsningen ikke skal blive unødvendigt krævende at sammensætte. Derfor fremsættes en øvre grænse for, hvor mange forskellige stykker specialværktøj, der må påkræves for at samle produktet.

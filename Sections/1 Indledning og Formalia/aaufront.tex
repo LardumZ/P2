@@ -1,0 +1,36 @@
+
+%\afterpage{\blankpage}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+\tikz[remember picture,overlay] \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{hoved/formalia/fotos/aau_waves.pdf}};
+
+{\centering
+\begin{mdframed}[leftmargin=.125\linewidth, rightmargin=.125\linewidth, skipabove=.3\paperheight, backgroundcolor=aaublue, linecolor=transparent, fontcolor=white, hidealllines=true, innertopmargin=15pt, innerbottommargin=15pt, roundcorner=2pt]
+    \centering
+
+    \textbf{\Huge \thetitle} \\
+    \vspace{7pt}
+
+    \setcounter{forcounter}{0} 
+    \foreach \i in \theauthor{
+        \addtocounter{forcounter}{1}
+        \mbox{\i}\ifnum \theforcounter<\theauthorlen {,} \else {} \fi\hspace{-5pt}
+    }
+    
+    % \theauthor
+    \vspace{2pt}
+    
+    \institute
+
+\end{mdframed}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=.2\linewidth]{hoved/formalia/fotos/logo.png}
+\end{figure}
+}
+ 
+
+\clearpage
