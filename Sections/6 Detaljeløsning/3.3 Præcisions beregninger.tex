@@ -30,9 +30,8 @@ Herfra ses der på hvilke kræfter som de lineære akser bliver udsat for. Akser
 \includegraphics[width=0.5\linewidth]{Sections/6 Detaljeløsning/Media/Ledeskrue-afstand.png}
     \caption{Tværsnit af ledeskrue og følgestanger med indtegnet flytningsbidrag}
     \label{fig:flytningsbidrag}
-\end{figure}
+\end{figure} \plainbreak{-.5}
 For at give et betydeligt flytningsbidrag, er der valgt en afstand på $\SI{25}{mm}$ fra ledeskruens centrum, til følgestængernes centrum, se figur \ref{fig:flytningsbidrag}. Dette giver også plads til følgestængerne og ledeskruen, så de ikke rører hinanden.
-
 
 
 
@@ -42,6 +41,8 @@ Designspecifikation 3 angiver at placeringen af en prik ikke må afvige mere end
 \begin{equation} \label{formel: udbøjning}
     W(y)=\iint \frac{M(y)}{E \cdot I} dy^2
 \end{equation}
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{Sections/6 Detaljeløsning/Media/FLD - y-akse.png}
@@ -49,8 +50,8 @@ Designspecifikation 3 angiver at placeringen af en prik ikke må afvige mere end
     \label{fig: FLD y-udbøj}
 \end{figure}
 
-Momentligningen ($M_{max}(y)$) er udledt fra bilag \ref{bilag- statik udledning} i formel \ref{formel: M_max(y)}. Denne formel er udledt af betingelserne fra figur \ref{fig: FLD y-udbøj}, hvor P's placering er uafhængig på stængerne. Ligningen for momentet indsættes i udbøjningsligningen \ref{formel: udbøjning}.
-\begin{equation}
+Momentligningen ($M_{max}(y)$) er udledt fra bilag \ref{bilag- statik udledning} i formel \ref{formel: M_max(y)}. Denne formel er udledt af betingelserne fra figur \ref{fig: FLD y-udbøj}, hvor P's placering er uafhængig på stængerne. Ligningen for momentet indsættes i udbøjningsligningen \ref{formel: udbøjning}, hvilket giver \ref{formel: W(y)}
+\begin{equation} \label{formel: W(y)}
     W(y)=\iint \frac{P\cdot \left(y-\frac{y^2}{L}\right)+\frac {q\cdot L}{2}\cdot\left( y-\frac{y^2}{L}\right)}{EI}dy^2
 \end{equation}
 
@@ -78,7 +79,7 @@ For at holde præcisionen og farten i ledeskruen, er det nødvendigt at skruen i
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{Sections/6 Detaljeløsning/Media/Udbøjning ifht. r.png}
+    \includegraphics[width=0.7\linewidth]{Sections/6 Detaljeløsning/Media/Udbøjning ifht. r.png}
     \caption{Kurve for udbøjning på x-aksen, afhængigt af radius på følgestænger.}
     \label{fig: Udbøjninggraf}
 \end{figure} \plainbreak{-0.5}
@@ -87,10 +88,10 @@ Af figur \ref{fig: Udbøjninggraf} fremgår det, at en radius på lidt over $\SI
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{Sections/6 Detaljeløsning/Media/Praktisk vs teoretisk udbøjning.png}
-    \caption{Skitse af den teoretiske reaktion og den praktiske reaktion af de lineære x-akser}
+    \includegraphics[width=0.9\linewidth]{Sections/6 Detaljeløsning/Media/Praktisk vs teoretisk udbøjning.png}
+    \caption{Skitse af den teoretiske reaktion og den praktiske reaktion af de lineære x-akser.}
     \label{fig: Udbøjningpraktik}
-\end{figure}
+\end{figure} \plainbreak{-0.5}
 
 Dette betyder, at udregninger giver en sikkerhedsfaktor i forhold til virkelighedens udbøjning. Derudover er det også antaget, at ledeskruen ikke vil bære noget vægt, og i virkeligheden vil det ikke være muligt, og derfor vil den faktiske udbøjning også skulle bøje ledeskruen, som har en diameter på $\SI{10}{mm}$. Dette er også en sikkerhedsfaktor, og derfor vurderes kravet i forhold til maksimal udbøjning opfyldt.
 
@@ -112,10 +113,10 @@ Kraften der påvirker udbøjningen vil være massen af hovedet ganget med dets a
 
 
 
-\section{Opsummering på nøjagtgihed af prikplacering}
+\subsection{Opsummering på nøjagtgihed af prikplacering} \label{opsummering på nøjagtgihed af prikplacerin}
 
 
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.1}
 \begin{table}[H]
 \setlength{\tabcolsep}{20pt}
  \centering
@@ -140,41 +141,6 @@ Kraften der påvirker udbøjningen vil være massen af hovedet ganget med dets a
 
  \end{tabular}
  \label{tab: variabelliste}
-\end{table}
+\end{table} \plainbreak{-.5}
 
-Udbøjningen kommer til at være maksimalt $\SI{6,5d-3}{mm}$, og er dermed under kravet om $\SI{\pm0,1}{mm}$ afvigelse. Summen af tolerancerne fra udbøjningen og steppet i motoren må angive den samlede tolerance i forhold til præcision af prikplacering. Summen bliver $\SI{6,5d-3}{mm}+\SI{d-2}{mm}$ = $\SI{16,5d-3}{mm}$, hvilket er under afvigelsen på  $\SI{\pm0,1}{mm}$ med en faktor 6. Kravet om prikpositionspræcision er derved opfyldt.
-
-
-\begin{comment}
-Præcision under accelererende bevægelse kan observeres ved at kigge på den kraft der går igennem massen på stængerne under acceleration og deceleration. Fra designspecifikation 3 må prikplacering ikke variere mere end $0,1$mm. Udbøjningen i x-aksen må derfor ikke overstige $0,1$mm, idet afstanden fra PeJV til bundpladen vil variere og ændre prikstørrelsen. Da det er de samme stænger med samme randbetingelser kan den samme formel for udbøjning bruges, med kraften der kommer fra accelerationen. Derudover er de to følgestænger side om side bedre til at modstå udbøjning i xy-planet, da der i dette plan vil være flytningsbidrag imellem de to cylindre. Forskellen kan ses på figur \ref{fig: Flytningsbidrag1} og \ref{fig: Flytningsbidrag2}
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{Sections/6 Detaljeløsning/Media/Tværsnit x-x.png}
-        \caption{Tværsnit når følgestængerne er over hinanden} 
-        \label{fig: Flytningsbidrag1}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.52\textwidth}
-        \includegraphics[width=\textwidth]{Sections/6 Detaljeløsning/Media/Tværsnit y-y.png}
-        \caption{Tværsnit når følgestængerne er ved siden af hinanden} 
-        \label{fig: Flytningsbidrag2}
-    \end{subfigure}
-    \caption{Følgestængers placering i forhold til ledeskruen}
-\end{figure}
-
-Med flytningsbidrag hedder inertimomentet følgende
-\begin{equation} \label{formel: I_xx med x^2 og A}
-    I_{xx\perp}=I_{xx}+z^2\cdot A
-\end{equation}
-Det nye inertimoment findes altså ved at tage det gamle og lægge et flytningsbidrag til. Flytningsbidraget findes ved at gange højden i anden på forskellen fra areamidtpunktet med arealet. Arealet af en cylinder findes ved formlen $\pi\cdot r^2$ og kan indsættes på A's plads. Derudover er konstruktionen lavet med $50$mm i mellem de to cylindre, og der vil derfor være $25$mm til arealmidtpunktet for begge cylindre.
-\begin{equation}
-    I_{xx}=I_{xx1}+z^2\cdot \pi\cdot r^2
-\end{equation}
-For at kende udbøjningen er det nødvendigt at finde kraften der påvirker stængerne. Her bruges Newtons anden lov $F=m\cdot a$, hvor massen er massen af lasten der sidder på stængerne og accelerationen er skruens egenskab til at bremse/accelerere lasten. I bilag \ref{Bilag - Bevægelse} ses det, at den lineære acceleration kan skrives som $a=\alpha \cdot O$, hvor O er gevindhældningen i skruen og alpha er vinkelaccelerationen. Vinkelaccelerationen kan omskrives i dette tilfælde også fra bilag \ref{Bilag - Bevægelse} til $\frac{\tau}{m\cdot r^2} $. Dermed må kraften kunne skrives som:
-\begin{equation}
-    F=\frac{m_v\cdot O\cdot \tau}{m_l\cdot r_l^2} 
-\end{equation}
-Hvor $m_v$ er massen af lasten, $\tau$ er momentet fra motoren, $m_l$ er massen af ledeskruen og $r_l$ er radius af ledeskruen. Når denne kraft, og det fundne inertimoment indsættes kan den nye udbøjning findes, og den maksimale udbøjning bliver $8\mu m$ og er dermed inden for $0,05mm$ tolerance i forhold til præcision.    
-\end{comment}
-
-
+Udbøjningen kommer til at være maksimalt $\SI{6,5d-3}{mm}$, og er dermed under kravet om $\SI{\pm0,1}{mm}$ afvigelse. Summen af tolerancerne fra udbøjningen og steppet i motoren må angive den samlede tolerance i forhold til præcision af prikplacering. Summen bliver $\SI{6,5d-3}{mm}+\SI{d-2}{mm}$ = $\SI{16,5d-3}{mm}$, hvilket er under afvigelsen på  $\SI{\pm0,1}{mm}$ med en faktor 6. Præstationskravet om prikpositionspræcision er derved opfyldt.

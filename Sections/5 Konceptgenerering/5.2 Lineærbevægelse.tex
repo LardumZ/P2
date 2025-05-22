@@ -1,10 +1,10 @@
 \subsection{Lineær bevægelse} \label{løsningsanal: Lineær bevægelse}
-Det ønskes at finde en optimal bevægelsesform til flytning af prikemnet under prikpåføring. Fra designspecifikationer kan det ses, at der lægges vægt på præcision og hastighed af prikplacering. Dette vil bruges til at vægte forskellige lineære løsningsforslag, og vurdere den bedste løsning.
-Af disse grunde, vælges der at udelukke løsninger der er upræcise, langsomme og evt. for komplicerede til at være en optimal løsning, dette efterlader valget mellem et tandremdrevet og et skruedrevet system. \parencite{IndustrialQuickSearch2025LinearPrinciples}
+Det ønskes at finde en optimal bevægelsesform til flytning af PeJV under prikpåføring. Fra designspecifikationer kan det ses, at der lægges vægt på præcision og hastighed af prikplacering. Dette vil bruges til at vægte forskellige lineære løsningsforslag, og vurdere den bedste løsning.
+Af disse grunde, vælges der at udelukke løsninger der er upræcise, langsomme og evt. for komplicerede til at være en optimal løsning. Dette efterlader valget mellem et tandremdrevet og et skruedrevet system. \parencite{IndustrialQuickSearch2025LinearPrinciples}
 
-\textbf{Skruedrevet system} omfatter de to mest udbredte metoder; kugleskruer og ledeskruer. Ledeskruer omdanner roterende bevægelse til lineær bevægelse, gennem et gevind på skruen, hvortil genstanden der skal flyttes sidder på skruen se figur \ref{fig:Ledeskrue - skitse}. Ved at bevæge gevindet vil genstanden bevæge sig med gevindets spiral og derved bevæge sig frem ad.
+\textbf{Skruedrevet system} omfatter kugleskruer og ledeskruer. Ledeskruer omdanner roterende bevægelse til lineær bevægelse, gennem et gevind på skruen, hvortil genstanden der skal flyttes, sidder på skruen se figur \ref{fig:Ledeskrue - skitse}. Ved at bevæge gevindet vil genstanden bevæge sig med gevindets spiral og derved bevæge sig fremad.
 
-Ledeskruer kræver færre dele og mindre vedligeholdelse end en kugleskrue. Tilgengæld er den mindre effektiv, grundet en større kontaktflade. Generelt gør ledeskruers simplere design, som ses i figur \ref{fig:Ledeskrue - skitse}, den billigere, men en kugleskrue kan have højere nøjagtighed og flytte tungere laster. Kugleskruers primære fordel er den lavere friktion og dermed højere effektivitet. Her er effektivitet et udtryk for forholdet mellem overført kraft og energi tabt til varme. (\cite{UniversalThreadGrindingCompany2020PrecisionAssemblies}; \cite{IndustrialQuickSearch2025LeadBenefits})
+Ledeskruer kræver færre dele og mindre vedligeholdelse end en kugleskrue. Tilgengæld er den mindre effektiv, grundet en større kontaktflade. Generelt gør ledeskruers simplere design, som ses i figur \ref{fig:Ledeskrue - skitse}, den billigere, hvor en kugleskrue kan have højere nøjagtighed og flytte tungere laster. Kugleskruers primære fordel er den lavere friktion og dermed højere effektivitet. Her er effektivitet et udtryk for forholdet mellem overført kraft og energi tabt til varme. (\cite{UniversalThreadGrindingCompany2020PrecisionAssemblies}; \cite{IndustrialQuickSearch2025LeadBenefits})
 
 \begin{figure}[H]
     \centering
@@ -21,22 +21,22 @@ Ledeskruer kræver færre dele og mindre vedligeholdelse end en kugleskrue. Tilg
     \caption{Kugleskrue illustration}
     \label{fig: Balls nut} % Mig når mig når når mig når viljams mor
   \end{subfigure}
-    \caption{}
+    \caption{Skruedrevet systemer}
 \end{figure} \plainbreak{-0.5}
 
-Kugleskruer omsætter rotations kraft til lineære kraft, denne transformation opnås ved at rotere en skrue, hvorpå en kuglemøtrik er monteret. Kuglemøtriken indholder en mængde kugler, som bevæger sig i skurens gevind. Kuglernes bevægelse i gevindet resultere i at kuglemøtriken skubbes langs skruen. Kuglemøtrikens udformning muliggøre at kuglerne kan genanvendes, ved at når de når enden føres de gennem kuglemøtriken tilbage til fronten af kuglerækken (Se figur \ref{fig: Balls nut}). Kugleskruer har en højere effektivitet end ledeskruer, da rullende kugler har en lavere friktions koeficient end to flader, der gnider mod hinanden, som i en ledeskrue. Kugleskruers afvigelse ligger lidt under $\SI{0,0001}{mm}$. (\cite{Jaffe2025PrecisionGround}; \cite{IndustrialQuickSearch2025BallBenefits})
+Kugleskruer omsætter rotations kraft til lineære kraft, denne transformation opnås ved at rotere en skrue, hvorpå en kuglemøtrik er monteret. Kuglemøtriken indholder en mængde kugler, som bevæger sig i skurens gevind. Kuglernes bevægelse i gevindet resulterer i at kuglemøtriken skubbes langs skruen. Kuglemøtrikens udformning muliggør at kuglerne kan genanvendes, ved at når de kommer til enden føres de gennem kuglemøtriken tilbage til fronten af kuglerækken (Se figur \ref{fig: Balls nut}). Kugleskruer har en højere effektivitet end ledeskruer, da rullende kugler har en lavere friktions koeficient end to flader, der gnider mod hinanden, som i en ledeskrue. Kugleskruers afvigelse ligger lidt under $\SI{d-4}{mm/mm}$. (\cite{Jaffe2025PrecisionGround}; \cite{IndustrialQuickSearch2025BallBenefits})
 
 
-\textbf{Tandremsdrevede systemer} er kendetegnet ved, at en motor roterer en tandremskive hvorpå tandremmer sidder. Denne tandrem er koblet til en genstand, der ønskes at bevæges langs bæltets længde. Når tandremmen roteres den ene vej, vil emnet blive trukket i den retning, og modsatte retning hvis rotationsvejen vendes. Det tandremsdrevede system, er effektivt under lange arbejdslængder, og kan opnå store hastigheder. Tandremmene har en risiko for at glide, samt består af mere elastiske materialer end skruerne, hvilket kan medføre en afvigelse i præcision. Tandremmes afvigelse ligger omkring \(\SI{0,001}{mm/mm}\) \parencite{Rollco2022BallWhat}. 
+\textbf{Tandremsdrevede systemer} er kendetegnet ved, at en motor roterer en tandremskive hvorpå en tandrem sidder. Denne tandrem er koblet til en genstand, der ønskes at bevæges langs bæltets længde. Når tandremmen roteres den ene vej, vil emnet blive trukket i den retning, og modsatte retning hvis rotationsvejen vendes. Det tandremsdrevede system, er effektivt under lange arbejdslængder, og kan opnå store hastigheder. Tandremmene har en risiko for at glide, samt består af mere elastiske materialer end skruerne, hvilket kan medføre en afvigelse i præcision. Tandremmes afvigelse ligger omkring \(\SI{d-3}{mm/mm}\) \parencite{Rollco2022BallWhat}. 
 
 \begin{figure}[H]
     \centering
-\includegraphics[width=0.6\linewidth]{Sections/5 Konceptgenerering/Media/Illustration af tandrem 7.png}
+\includegraphics[width=0.65\linewidth]{Sections/5 Konceptgenerering/Media/Illustration af tandrem 7.png}
     \caption{Illustration af tandrem.}
     \label{fig: Illustration af tandrem}
 \end{figure} \plainbreak{-.5}
 
-Grundet materialerne tandremmen er lavet af varierer, sammen med remmene bliver svage i løbet af deres levetid, betyder dette at præcisionen af tandremme afhænger af mange faktorer. For at tandremssystemer kan opnå den nødvendige præcision, kræver det mere justering og er mindre pålideligt over løsningens levetid. \parencite{Casillo2025Belt-DrivenInc} 
+Grundet materialerne tandremme er lavet af varierer, sammen med remmene bliver svage i løbet af deres levetid, betyder dette at præcisionen af tandremme afhænger af flere forskellige faktorer. For at tandremssystemer kan opnå den nødvendige præcision, kræver det mere justering og er mindre pålideligt over løsningens levetid. \parencite{Casillo2025Belt-DrivenInc} \\
 
 
 \subsubsection{Valg af lineær bevægelse}  \plainbreak{-0.5}

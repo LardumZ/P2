@@ -3,34 +3,34 @@
 Løsningen skal sætte prikker i et arbejdsområde på \SI{200}{mm} \(\times\) \SI{150}{mm} \(\times\) \SI{50}{mm} område, hvor det ønskes, at robotten kan opnå en vilkårlig position indenfor dette område. I dette afsnit undersøges, hvordan PeJV'en skal bevæge sig, for at opfylde dette. Heraf skal PeJV'en bevæges i x-og y-retningen. Der kræves en høj præcision, i og med at en påsat prik kun må afvige med $\SI{\pm0,1}{mm}$ for at opfylde præstationskrav 1.
 %Robotten skal bevæge sig i både x-og y-retningen, for at udføre sin opgave. Løsningen er den samme for de bevægelige dele i både x-og y-retningen. Drivmidlet for bevægelsen er en Nema 14 stepper motor, som sammen med en ledeskrue skaber bevægelsen. Motoren udføre et drejningsmoment på maks \(0,2\)Nm og roterer op til 2000 RPM, som sætter gang i rotationen af ledeskruen. Motoren er en stepper motor, hvilket betyder at den rotere i små steps. Én rotation er lig 360\(\degree\) og motoren har en step vinkel på 1,8\(\degree\), altså har motoren 200 steps for at opnå én rotation. Ledeskruen har en gevindstigning på \(2\)mm og en gevindhældning på \(2\)mm. 
 
-Løsningen er den samme for de bevægelige dele i både x-og y-retningen i et kartesisk koordinatsystem. De lineære bevægelser der designes til løsningen, benævnes \textit{ Lineær x-akse} og \textit{Lineær y- og z-akse}, for bevægelsen der henholdsvis sker parallel med x-aksen og y-aksen. Disse fremgår af figur \ref{Skite af akser med pile}, hvor bevægelsesretningen er angivet med blå pile, og ledeskruernes rotation med røde pile
+Løsningen er den samme for de bevægelige dele i både x-og y-retningen i et kartesisk koordinatsystem. De lineære bevægelser, der designes til løsningen, benævnes \textit{ lineær x-akse} og \textit{lineær y- og z-akse}, for bevægelsen der henholdsvis sker parallelt med x-aksen og y-aksen. Disse fremgår af figur \ref{Skite af akser med pile}, hvor bevægelsesretningen er angivet med blå pile, og ledeskruernes rotation med røde pile
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Sections/6 Detaljeløsning/Media/Akser med pile.png}
     \caption{Skitse af akser, med bevægelsesretninger for de lineære akser angivet med blå pile, og ledeskruernes rotation med røde pile.}
     \label{Skite af akser med pile}
-\end{figure}
+\end{figure} \plainbreak{-.5}
 
 Drivmidlet for bevægelsen i x-og y-aksen er en step-motor, som sammen med den udvalgte ledeskrue skaber bevægelsen. Motoren skaber et drejningsmoment, som sætter gang i rotationen af ledeskruen, der skubber to vogne langs x-aksen og PeJV'en langs y-aksen. Hvor meget akserne bevæger sig, er bestemt ud fra gevindhældningen af ledeskruen. Ledeskruen er udvalgt og i dette afsnit undersøges hvilken motor, som skal benyttes.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\linewidth]{Sections/6 Detaljeløsning/Media/Bane.png}
+    \includegraphics[width=0.6\linewidth]{Sections/6 Detaljeløsning/Media/Bane.png}
     \caption{Skite af én bane}
     \label{fig: Skite bane}
-\end{figure}
+\end{figure}\plainbreak{-.5}
 
 I bilag \ref{Bilag - Bevægelse} gennemgås udledningen af en formel for tid pr. cm\(^2\), men også en formel for tiden det tager at køre én bane (se figur \ref{fig: Skite bane}).
-En bane er defineret ud fra kvadratcentimeterens dimensioner. Da prikværktøjet kan sætte prikker under bevægelse, vil den kunne sætte en række af prikker på den tid den kan bevæge sig igennem rækken. Tiden det tager prikværktøjet at lave en række prikker fra den ene side af kvadratcentimeteren til den anden, kaldes banetiden. Banen kan ses på figur \ref{fig: Skite bane}. Prikkerne har som minimum en diameter på $\SI{0,1}{mm}$, og det er derfor muligt at placere højest 100 prikker på langs af \SI{1}{cm}, for at placere prikker på hele kvadratcentimeteren. Det er altså nødvendigt at lave 100 baner med $\SI{0,1}{mm}$ prikker af \SI{10}{mm}, for at fylde hele kvadratcentimeteren med prikker. Dette er anslået til den maksimale tid det vil tage at prikke en kvadratcentimeter, og vil bruges som overslag til tiden det vil tage at lave et speckle pattern per kvadratcentimeter.
+En bane er defineret ud fra kvadratcentimeterens dimensioner. Da prikværktøjet kan sætte prikker under bevægelse, vil den kunne sætte en række af prikker på den tid den kan bevæge sig igennem rækken. Tiden det tager prikværktøjet at lave en række prikker fra den ene side af kvadratcentimeteren til den anden, kaldes banetiden. Banen kan ses på figur \ref{fig: Skite bane}. Prikkerne har som minimum en diameter på $\SI{0,1}{mm}$, og det er derfor muligt at placere højest 100 prikker på langs af \SI{1}{cm}, for at placere prikker på hele kvadratcentimeteren. Det er altså nødvendigt at lave 100 baner af \SI{10}{mm}, for at fylde hele kvadratcentimeteren med prikker. Dette er anslået til den maksimale tid det vil tage at prikke en kvadratcentimeter, og vil bruges som overslag til tiden det vil tage at lave et speckle pattern per kvadratcentimeter.
 
 Motoren skal igennem tre faser for at udføre sin bevægelse på én bane, henholdsvis acceleration, konstant hastighed (top hastighed) og deceleration. Dette kan skrives som:
 \begin{equation}
     t_{bane}=2\cdot t_{acc}+t_{top}
 \end{equation}
 
-Hvor \(t_{bane}\) er den samlede tid det tager produktet at bevæge sig én bane. \(t_{acc}\) er tiden det tager at accelerere, men også tiden det tager og decelerere, da denne værdi er den samme, ganges denne værdi med 2. Dette udtryk udledes i \ref{Bilag - Bevægelse} til:
+Hvor \(t_{bane}\) er den samlede tid det tager produktet at bevæge sig én bane. \(t_{acc}\) er tiden det tager at accelerere, men også tiden det tager og decelerere, da denne værdi er den samme, ganges denne værdi med 2. Dette udtryk udledes i bilag \ref{Bilag - Bevægelse} til:
 \begin{equation}
     t_{bane}=\dfrac{m_{l}\cdot r_{l}^2\cdot \omega}{\tau}+\dfrac{s_{bane}}{\omega\cdot O}
     \label{eq: t_bane}
@@ -43,15 +43,15 @@ I ligning \ref{eq: t_bane} er \(m_{l}\) massen af ledeskruen på \SI{136}{g}, \(
  \end{equation}
 
 Det vurderes at motorens vinkelhastighed skal være så høj som muligt, da en højere top hastighed har større indflydelse på tiden end acceleration. \(\omega\) er den værdi, som er interessant grundet hastigheden af den roterende ledeskrue bestemmer hvor hurtigt x-og y-aksen bevæger sig. I og med kravet på tid pr. cm\(^2\) har en værdi på maksimalt 30 sekunder, og ikke er en ukendt variabel kan \(\tau\) isoleres. 
-En funktion kan derved opsættes med \(\omega\) som variabel, så der kan aflæses en minimum vinkelhastighed, som skal benyttes for at produktet kan udføre sig arbejde:
-\begin{equation}
+En funktion for $\tau$ med \(\omega\) som variabel, kan derved opsættes (\ref{formel: tau}) så der kan aflæses en minimum vinkelhastighed, som skal benyttes for at produktet kan udføre sig arbejde:
+\begin{equation}\label{formel: tau}
     \tau(\omega)=\dfrac{m_{l} \cdot r_{l}^2 \cdot \omega}{t_{bane} \cdot O - s_{bane}}
 \end{equation}
 
-Denne funktion plottes i et koordinatsystem med \(\omega\) ud af x-aksen og \(\tau\) op af y-asken. En minimum værdi for \(\omega\) kan nu aflæses, se figur \ref{fig: Tau-Omega plot}:
+Denne funktion plottes i et koordinatsystem med \(\omega\) ud af 1.-aksen og \(\tau\) op af 2.-asken. En minimum værdi for \(\omega\) kan nu aflæses, se figur \ref{fig: Tau-Omega plot}:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{Sections/6 Detaljeløsning/Media/Billeder til indspænding/tau-omegaplot.png}
+    \includegraphics[width=0.6\linewidth]{Sections/6 Detaljeløsning/Media/Billeder til indspænding/tau-omegaplot.png}
     \caption{Graf over \(\tau\) som funktion af \(\omega\)}
     \label{fig: Tau-Omega plot}
 \end{figure}
@@ -85,9 +85,9 @@ Udtrykket for \(\alpha\) indsættes i formlen for accelerationen:
     a=\dfrac{\tau}{m_{l}\cdot r_{l}^2}\cdot O
 \end{equation}
 
-Med en gevindhældning \(O\) på \SI{2}{mm} og en radius \(r_{l}\) af ledeskruen på \SI{5}{mm} fås en acceleration på \SI{70,8}{m/s^2}. Tophastigheden udregnes ved: \(v=\omega\cdot O\) og er \SI{6,67}{cm/s} eller \SI{0,07}{m/s}
+Med en gevindhældning \(O\) på \SI{2}{mm} og en radius \(r_{l}\) af ledeskruen på \SI{5}{mm} fås en acceleration på \SI{70,8}{m/s^2}. Tophastigheden udregnes ved: \(v=\omega\cdot O\) og er \SI{6,67}{cm/s}.
 
-Motoren har også en relevans for præcisionen af produktet. NEMA 14 motoren er en step-motor, hvilket betyder, at motoren kører i små steps. Den udvalgte motor har ifølge \parencite{Igus2025DrylinNEMA14} en step vinkel på 1,8\(\degree\) og da én rotation er 360\(\degree\) har motoren 200 steps til at udføre én rotation, denne værdi kaldes \(n_{step}\). Præcisionen kan derved bestemmes ud fra \(n_{step}\) og gevindhældningen \(O\)
+Motoren har også en relevans for præcisionen af produktet. NEMA 14 motoren er en step-motor, hvilket betyder, at motoren kører i små steps. Den udvalgte motor har ifølge \parencite{Igus2025DrylinNEMA14} en step vinkel på 1,8\(\degree\) og da én rotation er 360\(\degree\) har motoren 200 steps til at udføre én rotation, denne værdi kaldes \(n_{step}\). Præcisionen kan derved bestemmes ud fra \(n_{step}\) og gevindhældningen \(O\).
 \begin{equation}
     \delta=\dfrac{O}{n_{step}}
 \end{equation}

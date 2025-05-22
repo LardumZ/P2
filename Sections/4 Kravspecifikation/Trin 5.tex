@@ -1,24 +1,24 @@
 \subsection{Trin 5 - Udarbejdelse af designspecifikationer} \label{Trin 5}
-Det femte trin har til formål, at omsætte ønsker til målbare designspecifikationer, der muliggører konkrete og målbare test af den endeligt løsning. Designspecifikationerne beskrives i dette afsnit og kan ses i tabel \ref{tab:krav}.
+Det femte trin har til formål, at omsætte ønsker til målbare designspecifikationer, der muligører konkrete og målbare test af den endelige løsning. Designspecifikationerne beskrives i dette afsnit og kan ses i tabel \ref{tab:krav}.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[H]
     \centering
-     \caption{Design specifikationer.For optimerings retningen (OR) betyder \textbf{--} en fastlagt værdi, $\blacktriangledown$ betyder specifikationen forbedres når værdien mindskes og $\blacktriangle$ betyder specifikationen forbedres når værdien øges}
+     \caption{Design specifikationer.For optimerings retningen (OR) betyder \textbf{--} en fastlagt værdi, \protect$\btdown$ betyder specifikationen forbedres når værdien mindskes og $\blacktriangle$ betyder specifikationen forbedres når værdien øges}
     \begin{tabular}{|l|c|c|} \hline
      \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Designspecifikation}}} &  \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{Enhed}}} &  \multicolumn{1}{|c}{\cellcolor{aaublue} \textcolor{white}{\textbf{OR}}} \\ \specialrule{0pt}{0.5pt}{0pt} \hline 
         1. Prikstørrelse& mm & \textbf{--} \\ \hline
-        2. Variation på prikstørrelser & mm & $\blacktriangledown$ \\ \hline
-        3. Variation på prikplacering & mm & $\blacktriangledown$ \\ \hline
+        2. Variation på prikstørrelser & mm & $\btdown$ \\ \hline
+        3. Variation på prikplacering & mm & $\btdown$ \\ \hline
         4. Størrelse af arbejdsområdet & mm & $\blacktriangle$\\ \hline
-        5. Flytning af emnet under fremstilling af speckle pattern & mm & $\blacktriangledown$\\ \hline
+        5. Flytning af emnet under fremstilling af speckle pattern & mm & $\btdown$\\ \hline
         6. Antal forskellige farvemidler til speckle pattern & Farvemidler & $\blacktriangle$ \\ \hline
         7. Kontrast mellem prik og baggrund	& -- & $\blacktriangle$ \\ \hline
-        8. Tidsforbrug på prikplacering & $\SI{}{s/cm^2}$ & $\blacktriangledown$ \\ \hline
-        9. Brugerinvolvering under process & min & $\blacktriangledown$\\ \hline
-        10. Tid brugt på opsætning  & min & $\blacktriangledown$\\ \hline
-        11. Antal værktøj til at samle hele produktet & Værktøj & $\blacktriangledown$ \\ \hline
-        12. Antal specialværktøj til at samle hele produktet & Værktøj & $\blacktriangledown$\\ \hline
+        8. Tidsforbrug på prikplacering & $\SI{}{s/cm^2}$ & $\btdown$ \\ \hline
+        9. Brugerinvolvering under process & min & $\btdown$\\ \hline
+        10. Tid brugt på opsætning  & min & $\btdown$\\ \hline
+        11. Antal værktøj til at samle hele produktet & Værktøj & $\btdown$ \\ \hline
+        12. Antal specialværktøj til at samle hele produktet & Værktøj & $\btdown$\\ \hline
     \end{tabular}
     \label{tab:krav}
 \end{table}
@@ -29,7 +29,7 @@ Det femte trin har til formål, at omsætte ønsker til målbare designspecifika
 
 \textbf{3. Variation af prikplacering} beskriver den acceptable afvigelse fra den teoretiske placering og den virkelige placering. Dette er valgt på baggrund af den høje vægtning tildelt ønske 2 om genskabelighed. 
 
-\textbf{4. Størrelse af arbejdsområdet} sættes som desingspecifikation, fordi det skal være muligt, at sætte prikker på forskellige størrelser emner, som det fremgår af ønske 3. 
+\textbf{4. Størrelse af arbejdsområdet} sættes som designspecifikation, fordi det skal være muligt, at sætte prikker på forskellige størrelser emner, som det fremgår af ønske 3. 
 
 \textbf{5. Fastholdelse af emnet} sikrer et godt speckle pattern som der vægtes i ønske 1. Det er en nødvendighed, at emnet ikke bevæger sig under påføring, således robotten kan overføre det ønskede speckle pattern så præcist som muligt.
 

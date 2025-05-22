@@ -1,3 +1,4 @@
+% ¤¤ THANK YOU CLAUDE YOU THE GOAT ¤¤
 \documentclass[a4paper,11pt,oneside,openright]{memoir}
 
 % ¤¤ Document encoding and fonts ¤¤ %
@@ -27,21 +28,17 @@
 
 % ¤¤ Math packages ¤¤ %
 \usepackage{amsmath} 		                % Avancerede matematik-udvidelser
-\usepackage{amssymb} 
-% \usepackage{mathabx}			            % Andre matematik- og tegnudvidelser (commented out due to conflicts)
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage{scalerel}
+\newcommand{\btdown}{\scalerel*{\blacktriangledown}{\blacktriangle}} % FUCK TRIANGLES ANDJISABDPASD IMMA COMMIT SEPPUKU
+%\usepackage{wasysym}	            
 
-% Import only the diameter symbol from mathabx to avoid conflicts
-\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
-\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
-\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
-\DeclareMathSymbol{\diameter}{\mathord}{mathx}{"3F}
-\usepackage{textcomp}                 		% Symbol-udvidelser (fx promille-tegn med \textperthousand)
+%\usepackage{textcomp}                 		% Symbol-udvidelser (fx promille-tegn med \textperthousand)
 \usepackage{siunitx}						% Flot og konsistent praesentation af tal og enheder med \si{enhed} og \SI{tal}{enhed}
 \sisetup{output-decimal-marker = {,}}		% Opsaetning af \SI og decimalseparator
 \sisetup{exponent-product = \cdot}
 \sisetup{per-mode=fraction, fraction-function=\frac}
-\usepackage[version=4]{mhchem} 			    % Kemi-pakke til flot og let notation af formler, fx \ce{Fe2O3}
-\usepackage{breqn}
 
 % ¤¤ Tables and arrays ¤¤ %
 \usepackage{array, makecell}                % Combined array packages (removed duplicate)
@@ -70,9 +67,6 @@
 \usetikzlibrary{plotmarks}
 \usetikzlibrary{matrix,fit,calc}
 \usetikzlibrary{positioning,arrows.meta,calc}
-
-% ¤¤ Chemistry ¤¤ %
-\usepackage{chemfig}                        % Kemi streg figure
 
 % ¤¤ Bibliography ¤¤ %
 \usepackage[natbib=false, backend=biber,sorting=nyt,style=apa]{biblatex}
@@ -150,7 +144,7 @@
 %%%% CUSTOM COMMANDS AND SYMBOLS %%%%
 \newcommand{\blackbigcirc}{\tikz[baseline=-0.5ex] \fill (0,0) circle (1.1ex);} % cirkel med sort infill der bruges i HOQ
 
-% Figre til morfanalyse
+% Figure til morfanalyse
 \newcommand{\lillacirc}{\tikz[baseline=-.6ex] \draw[violet, fill=violet] (0,0) circle (.8ex);}
 \newcommand{\bluebox}{\tikz[baseline=-0ex] \draw[blue, fill=blue] (0,0) rectangle (1.4ex,1.4ex);}
 \newcommand{\cyanbox}{\tikz[baseline=-0ex] \draw[cyan, fill=cyan]  (0,0.9ex) -- (0.9ex,1.8ex) -- (1.8ex,0.9ex) -- (0.9ex, 0) -- (0,0.9ex);}
